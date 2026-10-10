@@ -1076,6 +1076,35 @@ pre {
   font-weight: 600;
 }
 
+/* Back end */
+
+.backend {
+  display: grid;
+  grid-template-columns: minmax(0, 4fr) minmax(0, 8fr);
+  gap: clamp(24px, 5vw, 72px);
+  align-items: center;
+}
+
+.backend-lead {
+  padding: 24px 22px 26px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+}
+
+.backend-lead h3 {
+  margin-top: 22px;
+  font-family: var(--sans);
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+.backend-lead p {
+  margin-top: 4px;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
 /* FAQ */
 
 .faq-list {
@@ -1404,6 +1433,10 @@ pre {
 
   .notes {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .backend {
+    grid-template-columns: minmax(0, 1fr);
   }
 
   .tech {

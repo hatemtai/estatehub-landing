@@ -4,11 +4,11 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>EstateHub — Real estate marketplace built with Next.js 16</title>
-  <meta name="description" content="EstateHub is a real estate marketplace front end for Next.js 16. Buyers search on a map and reserve, sellers list and get paid, and your team runs it all from one admin console.">
+  <meta name="description" content="EstateHub is a full-stack real estate marketplace: a Next.js 16 front end and a Django 5.2 API in one package. Buyers search on a map and reserve, sellers list and get paid, and your team runs it all from one admin console.">
   <meta name="theme-color" content="#f5f5f2">
   <meta property="og:type" content="website">
   <meta property="og:title" content="EstateHub — Real estate marketplace built with Next.js 16">
-  <meta property="og:description" content="Map search, deal tracking, verification and payouts for buyers, sellers and admins, in one Next.js 16 codebase.">
+  <meta property="og:description" content="Map search, deal tracking, verification and payouts for buyers, sellers and admins. A Next.js 16 front end and a Django API in one package.">
   <meta property="og:image" content="assets/img/og.jpg">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" href="favicon.ico" sizes="any">
@@ -51,6 +51,7 @@
     <symbol id="t-rhf" viewBox="0 0 24 24"><path d="M10.7754 17.3477H5.8065a.2815.2815 0 1 0 0 .563h4.9689a.2815.2815 0 1 0 0-.563zm7.3195 0h-4.9688a.2815.2815 0 1 0 0 .563h4.9688a.2815.2815 0 0 0 0-.563zm-7.3336-6.475H5.8065a.2815.2815 0 1 0 0 .563h4.9548a.2815.2815 0 1 0 0-.563zm7.3195 0h-4.9547a.2815.2815 0 1 0 0 .563h4.9547a.2815.2815 0 0 0 0-.563zm.5518-9.2001h-4.341a2.4042 2.4042 0 0 0-4.5804 0H5.3674c-1.7103 0-3.0968 1.3864-3.0968 3.0967v16.134C2.2706 22.6135 3.6571 24 5.3674 24h13.2652c1.7103 0 3.0968-1.3865 3.0968-3.0967V4.7693c0-1.7103-1.3865-3.0967-3.0968-3.0967zm-8.7046.563a.2815.2815 0 0 0 .2815-.2224 1.8411 1.8411 0 0 1 3.5979 0 .2815.2815 0 0 0 .2815.2224h1.5146v1.844a.8446.8446 0 0 1-.8446.8446H9.2552a.8446.8446 0 0 1-.8446-.8446v-1.844Zm11.2383 18.6677c0 1.3993-1.1344 2.5337-2.5337 2.5337H5.3674c-1.3993 0-2.5337-1.1344-2.5337-2.5337V4.7693c0-1.3993 1.1344-2.5337 2.5337-2.5337h2.4802v1.844c0 .7774.6302 1.4076 1.4076 1.4076h5.4896c.7774 0 1.4076-.6302 1.4076-1.4076v-1.844h2.4802c1.3993 0 2.5337 1.1344 2.5337 2.5337z"/></symbol>
     <symbol id="t-zod" viewBox="0 0 24 24"><path d="M2.584 3.582a2.247 2.247 0 0 1 2.112-1.479h14.617c.948 0 1.794.595 2.115 1.487l2.44 6.777a2.248 2.248 0 0 1-.624 2.443l-9.61 8.52a2.247 2.247 0 0 1-2.963.018L.776 12.773a2.248 2.248 0 0 1-.64-2.467Zm12.038 4.887-9.11 5.537 5.74 5.007c.456.399 1.139.396 1.593-.006l5.643-5.001H14.4l6.239-3.957c.488-.328.69-.947.491-1.5l-1.24-3.446a1.535 1.535 0 0 0-1.456-1.015H5.545a1.535 1.535 0 0 0-1.431 1.01l-1.228 3.37z"/></symbol>
     <symbol id="t-leaflet" viewBox="0 0 24 24"><path d="M17.69 0c-.355.574-8.432 4.74-10.856 8.649-2.424 3.91-3.116 6.988-2.237 9.882.879 2.893 2.559 2.763 3.516 3.717.958.954 2.257 2.113 4.332 1.645 2.717-.613 5.335-2.426 6.638-7.508 1.302-5.082.448-9.533-.103-11.99A35.395 35.395 0 0 0 17.69 0zm-.138.858l-9.22 21.585-.574-.577Z"/></symbol>
+    <symbol id="t-django" viewBox="0 0 24 24"><path d="M11.146 0h3.924v18.166c-2.013.382-3.491.535-5.096.535-4.791 0-7.288-2.166-7.288-6.32 0-4.002 2.65-6.6 6.753-6.6.637 0 1.121.05 1.707.203zm0 9.143a3.894 3.894 0 00-1.325-.204c-1.988 0-3.134 1.223-3.134 3.365 0 2.09 1.096 3.236 3.109 3.236.433 0 .79-.025 1.35-.102V9.142zM21.314 6.06v9.098c0 3.134-.229 4.638-.917 5.937-.637 1.249-1.478 2.039-3.211 2.905l-3.644-1.733c1.733-.815 2.574-1.529 3.109-2.625.561-1.121.739-2.421.739-5.835V6.059h3.924zM17.39.021h3.924v4.026H17.39z"/></symbol>
     <symbol id="t-charts" viewBox="0 0 24 24"><path d="M3 3h2v16h16v2H3V3Zm5 9h2.5v5H8v-5Zm4.75-6h2.5v11h-2.5V6Zm4.75 3.5H20V17h-2.5V9.5Z"/></symbol>
   </svg>
 
@@ -69,6 +70,7 @@
         <a href="#features">Features</a>
         <a href="#themes">Themes</a>
         <a href="#stack">Stack</a>
+        <a href="#backend">Backend</a>
         <a href="#faq">FAQ</a>
       </nav>
 
@@ -90,18 +92,18 @@
   <main id="main">
     <section class="hero">
       <div class="container">
-        <p class="hero-kind">A real estate marketplace for Next.js 16</p>
+        <p class="hero-kind">A full-stack real estate marketplace: Next.js 16 and Django 5.2</p>
         <h1>The whole property marketplace<span class="tight">,</span> <em>already built<span class="tight">.</span></em></h1>
 
         <div class="hero-row">
           <div class="hero-pitch">
-            <p class="lead">Map search for buyers, a portal for sellers and an admin console for your team. One Next.js codebase, 73 pages, connected to a REST API.</p>
+            <p class="lead">Map search for buyers, a portal for sellers and an admin console for your team. A Next.js front end with 73 pages and the Django API behind it, in one package.</p>
             <div class="actions" id="hero-actions">
               <a class="btn btn-solid" data-link="purchase" target="_blank" rel="noopener">Buy on CodeCanyon</a>
               <a class="btn btn-line" data-link="demo" target="_blank" rel="noopener">Open the live demo <svg class="icon"><use href="#i-out"/></svg></a>
               <button class="btn btn-tour" type="button" data-tour>
                 <span class="tour-thumb"><img src="assets/video/estatehub-tour-thumb.jpg" alt="" width="66" height="41"><span class="tour-play"><svg class="icon"><use href="#i-play"/></svg></span></span>
-                <span class="tour-text">Watch the tour<small>1:30 &middot; with sound</small></span>
+                <span class="tour-text">Watch the tour<small>1:49 &middot; with sound</small></span>
               </button>
             </div>
             <p class="hero-for">For agencies, developers and founders launching a property portal.</p>
@@ -110,7 +112,7 @@
           <div class="hero-facts">
             <ul class="stats">
               <li><strong>73</strong><span>Pages</span></li>
-              <li><strong>4</strong><span>Areas</span></li>
+              <li><strong>182</strong><span>API routes</span></li>
               <li><strong>3</strong><span>Roles</span></li>
               <li><strong>2</strong><span>Themes</span></li>
             </ul>
@@ -121,6 +123,7 @@
                 <li><svg class="logo"><use href="#t-react"/></svg>React 19</li>
                 <li><svg class="logo"><use href="#t-ts"/></svg>TypeScript 5</li>
                 <li><svg class="logo"><use href="#t-tailwind"/></svg>Tailwind CSS 4</li>
+                <li><svg class="logo"><use href="#t-django"/></svg>Django 5.2</li>
               </ul>
             </div>
           </div>
@@ -445,7 +448,7 @@
       <div class="container">
         <div class="section-head reveal">
           <h2>A stack your team already knows<span class="tight">.</span></h2>
-          <p>Nothing exotic and nothing abandoned. These are the libraries and major versions in the project, each doing one job.</p>
+          <p>Nothing exotic and nothing abandoned. These are the libraries and major versions in the front end, each doing one job.</p>
         </div>
 
         <div class="stack reveal">
@@ -512,6 +515,40 @@
       </div>
     </section>
 
+    <section class="section" id="backend">
+      <div class="container">
+        <div class="section-head reveal">
+          <h2>The back end is in the box<span class="tight">.</span></h2>
+          <p>The API behind every screen ships in the same package. It is a Django project you can read, run and extend, so nothing depends on a service of ours.</p>
+        </div>
+
+        <div class="backend reveal">
+          <div class="backend-lead">
+            <div class="tech-top"><svg class="logo"><use href="#t-django"/></svg><span>5.2 LTS</span></div>
+            <h3>Django</h3>
+            <p>With Django REST Framework, on Python 3.12 and PostgreSQL</p>
+          </div>
+          <ul class="stats">
+            <li><strong>182</strong><span>API routes</span></li>
+            <li><strong>38</strong><span>Data models</span></li>
+            <li><strong>34</strong><span>Models in Django admin</span></li>
+            <li><strong>2028</strong><span>Security fixes until April</span></li>
+          </ul>
+        </div>
+
+        <dl class="also reveal">
+          <div><dt>Long-term support</dt><dd>Django 5.2 is a long-term support release. It receives security fixes until April 2028.</dd></div>
+          <div><dt>API docs</dt><dd>182 routes under /api/v1. The OpenAPI schema, Swagger UI and ReDoc are generated from the code, so a mobile app can use the same API.</dd></div>
+          <div><dt>Django admin</dt><dd>Django's own admin is switched on, with 34 models registered, for the day a record has to be corrected by hand.</dd></div>
+          <div><dt>Database</dt><dd>38 models on PostgreSQL, with their migrations. One command builds the schema and another loads the demo data.</dd></div>
+          <div><dt>Real time</dt><dd>Chat and notifications travel over WebSockets on Django Channels. Slow work goes to Celery and Redis.</dd></div>
+          <div><dt>Services</dt><dd>Files on S3, Azure, Google Cloud or Cloudinary. Email by SMTP, SendGrid, Resend or Mailgun. Saved keys are encrypted in the database.</dd></div>
+          <div><dt>Security</dt><dd>Sign-in uses JWT. The production settings turn on HTTPS redirects, HSTS and secure cookies.</dd></div>
+          <div><dt>Deployment</dt><dd>A standard Django project with a Dockerfile. Any host with Python, PostgreSQL and Redis can run it.</dd></div>
+        </dl>
+      </div>
+    </section>
+
     <section class="section" id="faq">
       <div class="container">
         <div class="section-head reveal">
@@ -521,12 +558,16 @@
 
         <div class="faq-list reveal">
           <details>
+            <summary>Is the back end included?<svg class="icon"><use href="#i-plus"/></svg></summary>
+            <p>Yes. The package contains the Next.js front end and the Django API it talks to, with the full source of both. There is no separate purchase and no hosted service in between.</p>
+          </details>
+          <details>
             <summary>What do I need to run it?<svg class="icon"><use href="#i-plus"/></svg></summary>
-            <p>Node.js 20.9 or newer and pnpm. Copy the example environment file, point it at your EstateHub API, and run the dev command. That API URL is the only setting it cannot start without.</p>
+            <p>For the front end, Node.js 20.9 or newer and pnpm. For the API, Python 3.12, PostgreSQL and Redis. Copy the two example environment files, run the migrations, and point the front end at your API URL.</p>
           </details>
           <details>
             <summary>Where can I host it?<svg class="icon"><use href="#i-plus"/></svg></summary>
-            <p>Anywhere that runs Next.js. Vercel is the shortest path. On your own server, build it, start it, and put Nginx or Caddy in front for TLS.</p>
+            <p>The front end runs anywhere Next.js does, and Vercel is the shortest path. The API is a standard Django project with a Dockerfile, so a VPS or any host with Python, PostgreSQL and Redis will do. Put Nginx or Caddy in front for TLS.</p>
           </details>
           <details>
             <summary>How do buyers pay?<svg class="icon"><use href="#i-plus"/></svg></summary>
@@ -582,6 +623,7 @@
         <a href="#features">Features</a>
         <a href="#themes">Themes</a>
         <a href="#stack">Stack</a>
+        <a href="#backend">Backend</a>
         <a href="#faq">FAQ</a>
       </nav>
       <p>© 2026 EstateHub</p>
