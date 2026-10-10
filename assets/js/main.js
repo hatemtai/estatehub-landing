@@ -290,6 +290,32 @@
     if (event.key === "ArrowRight") stepLightbox(1);
   });
 
+  /* Product tour */
+
+  var tour = $("#tour");
+  var tourVideo = $("#tour-video");
+
+  $$("[data-tour]").forEach(function (button) {
+    button.addEventListener("click", function () {
+      if (typeof tour.showModal !== "function") return;
+      tour.showModal();
+      var playing = tourVideo.play();
+      if (playing && playing.catch) playing.catch(function () {});
+    });
+  });
+
+  $("#tour-close").addEventListener("click", function () {
+    tour.close();
+  });
+
+  tour.addEventListener("click", function (event) {
+    if (event.target === tour || event.target.classList.contains("tour-stage")) tour.close();
+  });
+
+  tour.addEventListener("close", function () {
+    tourVideo.pause();
+  });
+
   /* Theme comparison */
 
   var compare = $("#compare");

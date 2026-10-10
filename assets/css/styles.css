@@ -217,11 +217,23 @@ pre {
 
 .btn-quiet {
   padding-inline: 10px;
+  background: transparent;
   color: var(--ink);
 }
 
 .btn-quiet:hover {
   color: var(--accent-text);
+}
+
+.btn-tour .icon {
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
+  stroke-width: 1.5;
+}
+
+.btn-tour:hover .icon {
+  transform: none;
 }
 
 .btn-invert {
@@ -1210,6 +1222,24 @@ pre {
 
 .lightbox.is-single .lightbox-nav {
   visibility: hidden;
+}
+
+.tour-stage {
+  flex: 1;
+  min-height: 0;
+  display: grid;
+  place-items: center;
+  padding: 0 var(--gutter) 24px;
+}
+
+.tour-stage video {
+  display: block;
+  max-width: min(100%, 1280px);
+  max-height: 100%;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 10px;
+  background: #0b0c10;
 }
 
 /* Scroll reveal */
