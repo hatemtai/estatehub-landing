@@ -4,7 +4,7 @@
   var root = document.documentElement;
   var SCREENS = "assets/img/screens/";
   var THEME_KEY = "estatehub-landing-theme";
-  var THEME_COLORS = { light: "#f6f7fd", dark: "#0b1222" };
+  var THEME_COLORS = { light: "#f5f5f2", dark: "#0b0c10" };
 
   function $(selector, scope) {
     return (scope || document).querySelector(selector);
@@ -12,6 +12,10 @@
 
   function $$(selector, scope) {
     return Array.prototype.slice.call((scope || document).querySelectorAll(selector));
+  }
+
+  function pad(number) {
+    return number < 10 ? "0" + number : String(number);
   }
 
   function currentTheme() {
@@ -64,20 +68,14 @@
 
   applyTheme(currentTheme());
 
-  /* Outbound links */
+  /* Demo and purchase links */
 
   var links = window.ESTATEHUB_LINKS || {};
-  var hasLinks = false;
 
   $$("[data-link]").forEach(function (anchor) {
     var url = links[anchor.getAttribute("data-link")];
-    if (!url) return;
-    anchor.href = url;
-    anchor.hidden = false;
-    hasLinks = true;
+    if (url) anchor.href = url;
   });
-
-  if (hasLinks) root.classList.add("has-links");
 
   /* Header */
 
@@ -110,29 +108,41 @@
     if (event.key === "Escape") setNav(false);
   });
 
-  /* Screens showcase */
+  /* Screens */
 
   var tabs = $$(".tab");
   var stage = $(".showcase-stage");
   var shot = $("#showcase-shot");
   var pathLabel = $("#showcase-path");
   var caption = $("#showcase-caption");
+  var counter = $("#showcase-count");
   var activePanel = null;
 
   function panelOf(tab) {
     return document.getElementById(tab.getAttribute("aria-controls"));
   }
 
-  function screenNames(button) {
-    var name = button.getAttribute("data-shot");
-    var themed = button.closest(".showcase-panel").hasAttribute("data-themed");
+  function activeScreens() {
+    return $$(".screen-btn", activePanel);
+  }
+
+  function activeIndex() {
+    return activeScreens().indexOf($('.screen-btn[aria-current="true"]', activePanel));
+  }
+
+  function themedNames(name, themed) {
     return { light: themed ? name + "-light" : name, dark: themed ? name + "-dark" : name };
   }
 
-  function selectScreen(button) {
-    var names = screenNames(button);
+  function screenNames(button) {
+    return themedNames(button.getAttribute("data-shot"), button.closest(".showcase-panel").hasAttribute("data-themed"));
+  }
 
-    $$(".screen-btn", activePanel).forEach(function (item) {
+  function selectScreen(button, reveal) {
+    var names = screenNames(button);
+    var screens = activeScreens();
+
+    screens.forEach(function (item) {
       if (item === button) item.setAttribute("aria-current", "true");
       else item.removeAttribute("aria-current");
     });
@@ -142,15 +152,22 @@
     shot.alt = button.textContent.trim() + ": " + button.getAttribute("data-caption");
     pathLabel.textContent = button.getAttribute("data-path");
     caption.textContent = button.getAttribute("data-caption");
+    counter.textContent = pad(screens.indexOf(button) + 1) + " / " + pad(screens.length);
 
     if (shot.getAttribute("data-current") !== names[currentTheme()]) {
       stage.classList.add("is-loading");
       setScreen(shot, names[currentTheme()]);
     }
 
-    if (button.scrollIntoView && window.matchMedia("(max-width: 999px)").matches) {
-      button.scrollIntoView({ block: "nearest", inline: "center", behavior: "smooth" });
+    var list = button.closest(".screen-list");
+    if (reveal && list.scrollWidth > list.clientWidth) {
+      list.scrollTo({ left: button.offsetLeft - list.offsetLeft - 24, behavior: "smooth" });
     }
+  }
+
+  function stepScreen(step) {
+    var screens = activeScreens();
+    selectScreen(screens[(activeIndex() + step + screens.length) % screens.length], true);
   }
 
   function selectTab(tab, focus) {
@@ -188,8 +205,15 @@
 
   $$(".screen-btn").forEach(function (button) {
     button.addEventListener("click", function () {
-      selectScreen(button);
+      selectScreen(button, true);
     });
+  });
+
+  $("#showcase-prev").addEventListener("click", function () {
+    stepScreen(-1);
+  });
+  $("#showcase-next").addEventListener("click", function () {
+    stepScreen(1);
   });
 
   activePanel = panelOf(tabs[0]);
@@ -200,37 +224,53 @@
   var lightbox = $("#lightbox");
   var lightboxImage = $("#lightbox-img");
   var lightboxTitle = $("#lightbox-title");
+  var browsing = false;
 
-  function activeScreens() {
-    return $$(".screen-btn", activePanel);
+  function showInLightbox(name, title, alt) {
+    lightboxImage.src = screenUrl(name, 1920);
+    lightboxImage.alt = alt;
+    lightboxTitle.textContent = title;
   }
 
-  function activeIndex() {
-    return activeScreens().indexOf($('.screen-btn[aria-current="true"]', activePanel));
-  }
-
-  function renderLightbox() {
+  function renderShowcaseInLightbox() {
     var button = activeScreens()[activeIndex()];
     var tab = document.getElementById(activePanel.getAttribute("aria-labelledby"));
-    lightboxImage.src = screenUrl(screenNames(button)[currentTheme()], 1920);
-    lightboxImage.alt = shot.alt;
-    lightboxTitle.textContent = tab.textContent.trim() + " · " + button.textContent.trim();
+    showInLightbox(
+      screenNames(button)[currentTheme()],
+      tab.firstChild.textContent.trim() + " / " + button.textContent.trim(),
+      shot.alt
+    );
   }
 
-  function stepLightbox(step) {
-    var screens = activeScreens();
-    selectScreen(screens[(activeIndex() + step + screens.length) % screens.length]);
-    renderLightbox();
-  }
-
-  function openLightbox() {
+  function openLightbox(canBrowse) {
     if (typeof lightbox.showModal !== "function") return;
-    renderLightbox();
+    browsing = canBrowse;
+    lightbox.classList.toggle("is-single", !canBrowse);
     lightbox.showModal();
   }
 
-  $("#showcase-zoom").addEventListener("click", openLightbox);
-  $("#showcase-enlarge").addEventListener("click", openLightbox);
+  function stepLightbox(step) {
+    if (!browsing) return;
+    stepScreen(step);
+    renderShowcaseInLightbox();
+  }
+
+  function openShowcase() {
+    renderShowcaseInLightbox();
+    openLightbox(true);
+  }
+
+  $("#showcase-zoom").addEventListener("click", openShowcase);
+  $("#showcase-enlarge").addEventListener("click", openShowcase);
+
+  $$("[data-zoom]").forEach(function (button) {
+    button.addEventListener("click", function () {
+      var names = themedNames(button.getAttribute("data-zoom"), button.hasAttribute("data-themed"));
+      showInLightbox(names[currentTheme()], button.getAttribute("data-title"), $("img", button).alt);
+      openLightbox(false);
+    });
+  });
+
   $("#lightbox-close").addEventListener("click", function () {
     lightbox.close();
   });
@@ -259,25 +299,40 @@
     compare.style.setProperty("--pos", compareRange.value + "%");
   });
 
-  /* Scroll reveal */
+  /* Mobile purchase bar and scroll reveal */
 
+  var buybar = $("#buybar");
   var revealItems = $$(".reveal");
 
   if ("IntersectionObserver" in window) {
-    var observer = new IntersectionObserver(
+    var heroActions = $("#hero-actions");
+    var closing = $(".closing");
+    var hidden = { hero: true, closing: false };
+
+    var barObserver = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        hidden[entry.target === heroActions ? "hero" : "closing"] = entry.isIntersecting;
+      });
+      buybar.classList.toggle("is-visible", !hidden.hero && !hidden.closing);
+    });
+    barObserver.observe(heroActions);
+    barObserver.observe(closing);
+
+    var revealObserver = new IntersectionObserver(
       function (entries) {
         entries.forEach(function (entry) {
           if (!entry.isIntersecting) return;
           entry.target.classList.add("is-visible");
-          observer.unobserve(entry.target);
+          revealObserver.unobserve(entry.target);
         });
       },
-      { rootMargin: "0px 0px -8% 0px", threshold: 0.08 }
+      { rootMargin: "0px 0px -8% 0px", threshold: 0.06 }
     );
     revealItems.forEach(function (item) {
-      observer.observe(item);
+      revealObserver.observe(item);
     });
   } else {
+    buybar.classList.add("is-visible");
     revealItems.forEach(function (item) {
       item.classList.add("is-visible");
     });

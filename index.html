@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>EstateHub — Real estate marketplace built with Next.js 16</title>
   <meta name="description" content="EstateHub is a complete real estate marketplace front end: public property site, customer account, seller portal and admin console in one Next.js 16 app.">
-  <meta name="theme-color" content="#f6f7fd">
+  <meta name="theme-color" content="#f5f5f2">
   <meta property="og:type" content="website">
   <meta property="og:title" content="EstateHub — Real estate marketplace built with Next.js 16">
   <meta property="og:description" content="Public property site, customer account, seller portal and admin console in one Next.js 16 app.">
@@ -26,22 +26,20 @@
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..700&family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
   <svg class="sprite" aria-hidden="true" focusable="false">
     <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></symbol>
     <symbol id="i-moon" viewBox="0 0 24 24"><path d="M20.99 12.79A9 9 0 1 1 11.21 3a7 7 0 0 0 9.78 9.79z"/></symbol>
-    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
-    <symbol id="i-down" viewBox="0 0 24 24"><path d="M12 5v14M6 13l6 6 6-6"/></symbol>
-    <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
+    <symbol id="i-out" viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></symbol>
     <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
-    <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 8h16M4 16h16"/></symbol>
     <symbol id="i-close" viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12"/></symbol>
     <symbol id="i-expand" viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></symbol>
-    <symbol id="i-left" viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></symbol>
-    <symbol id="i-right" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></symbol>
+    <symbol id="i-left" viewBox="0 0 24 24"><path d="M19 12H5M11 6l-6 6 6 6"/></symbol>
+    <symbol id="i-right" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
     <symbol id="i-drag" viewBox="0 0 24 24"><path d="m9 7-5 5 5 5M15 7l5 5-5 5"/></symbol>
   </svg>
 
@@ -50,7 +48,7 @@
   <header class="site-header" id="top">
     <div class="container header-inner">
       <a class="brand" href="#top" aria-label="EstateHub home">
-        <img src="assets/img/logo.svg" alt="" width="28" height="28">
+        <img src="assets/img/logo.svg" alt="" width="26" height="26">
         <span>EstateHub</span>
       </a>
 
@@ -67,8 +65,8 @@
           <svg class="icon icon-moon"><use href="#i-moon"/></svg>
           <svg class="icon icon-sun"><use href="#i-sun"/></svg>
         </button>
-        <a class="btn btn-outline btn-sm header-cta" data-link="demo" target="_blank" rel="noopener" hidden>Live demo</a>
-        <a class="btn btn-primary btn-sm header-cta" data-link="purchase" target="_blank" rel="noopener" hidden>Buy now</a>
+        <a class="btn btn-quiet btn-sm header-demo" data-link="demo" target="_blank" rel="noopener">Live demo <svg class="icon"><use href="#i-out"/></svg></a>
+        <a class="btn btn-solid btn-sm header-buy" data-link="purchase" target="_blank" rel="noopener">Buy now</a>
         <button class="icon-btn nav-toggle" type="button" id="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="site-nav">
           <svg class="icon icon-menu"><use href="#i-menu"/></svg>
           <svg class="icon icon-close"><use href="#i-close"/></svg>
@@ -80,21 +78,30 @@
   <main id="main">
     <section class="hero">
       <div class="container">
-        <div class="hero-copy">
-          <h1>A full real estate marketplace in <em>one Next.js&nbsp;app.</em></h1>
-          <p class="lead">EstateHub gives you the public property site, the customer account, the seller portal and the admin console. 73 pages built with Next.js 16, React 19, TypeScript and Tailwind CSS 4, wired to a REST API.</p>
-          <div class="hero-actions">
-            <a class="btn btn-primary" data-link="purchase" target="_blank" rel="noopener" hidden>Buy on CodeCanyon <svg class="icon"><use href="#i-arrow"/></svg></a>
-            <a class="btn btn-outline" data-link="demo" target="_blank" rel="noopener" hidden>Live demo</a>
-            <a class="btn btn-primary hero-explore" href="#screens">Explore the screens <svg class="icon"><use href="#i-down"/></svg></a>
+        <p class="hero-kind">Real estate marketplace for Next.js</p>
+        <h1>The whole property marketplace, <em>already built.</em></h1>
+
+        <div class="hero-row">
+          <div class="hero-pitch">
+            <p class="lead">EstateHub is the front end for a buy-and-rent property platform: the public site, the customer account, the seller portal and the admin console, in one codebase wired to a REST API.</p>
+            <div class="actions" id="hero-actions">
+              <a class="btn btn-solid" data-link="purchase" target="_blank" rel="noopener">Buy on CodeCanyon</a>
+              <a class="btn btn-line" data-link="demo" target="_blank" rel="noopener">Open the live demo <svg class="icon"><use href="#i-out"/></svg></a>
+            </div>
           </div>
-          <p class="hero-facts">73 pages <span>·</span> 3 account roles <span>·</span> Light and dark portals <span>·</span> Phone to desktop</p>
+
+          <dl class="spec">
+            <div><dt>Pages</dt><dd>73</dd></div>
+            <div><dt>Areas</dt><dd>Public site, customer, seller, admin</dd></div>
+            <div><dt>Stack</dt><dd>Next.js 16, React 19, TypeScript 5, Tailwind CSS 4</dd></div>
+            <div><dt>Themes</dt><dd>Light and dark in both portals</dd></div>
+            <div><dt>Layout</dt><dd>Phone to desktop</dd></div>
+          </dl>
         </div>
 
-        <div class="hero-visual">
-          <div class="frame hero-frame">
-            <div class="frame-bar"><span class="frame-dots"><i></i><i></i><i></i></span><span class="frame-path">/admin/dashboard</span></div>
-            <img id="hero-shot" alt="EstateHub admin console dashboard with platform totals, revenue chart and marketplace overview" width="1920" height="1200" decoding="async" fetchpriority="high" sizes="(min-width: 1240px) 1120px, 94vw" data-light="admin-dashboard-light" data-dark="admin-dashboard-dark">
+        <div class="hero-stage">
+          <div class="hero-main">
+            <img class="shot" id="hero-shot" alt="EstateHub admin console dashboard with platform totals, revenue chart and marketplace overview" width="1920" height="1200" decoding="async" fetchpriority="high" sizes="(min-width: 1300px) 1080px, 86vw" data-light="admin-dashboard-light" data-dark="admin-dashboard-dark">
             <script>
               (function () {
                 var img = document.getElementById("hero-shot");
@@ -105,10 +112,13 @@
                 img.setAttribute("data-current", name);
               })();
             </script>
-            <noscript><img src="assets/img/screens/admin-dashboard-light-1920.webp" alt="EstateHub admin console dashboard" width="1920" height="1200"></noscript>
+            <noscript><img class="shot" src="assets/img/screens/admin-dashboard-light-1920.webp" alt="EstateHub admin console dashboard" width="1920" height="1200"></noscript>
           </div>
-          <div class="phone hero-phone">
-            <img alt="EstateHub on a phone" width="640" height="1385" loading="lazy" decoding="async" data-widths="640" src="assets/img/screens/mobile-listing-640.webp" data-light="mobile-listing" data-dark="mobile-seller-dark">
+          <div class="hero-side">
+            <img class="shot" alt="Seller portal listings in the opposite theme" width="1920" height="1200" loading="lazy" decoding="async" sizes="(min-width: 1300px) 560px, 46vw" src="assets/img/screens/seller-properties-dark-960.webp" data-light="seller-properties-dark" data-dark="seller-properties-light">
+          </div>
+          <div class="hero-phone phone">
+            <img alt="Map search on a phone" width="640" height="1385" loading="lazy" decoding="async" src="assets/img/screens/mobile-listing-640.webp">
           </div>
         </div>
       </div>
@@ -117,24 +127,23 @@
     <section class="section" id="screens">
       <div class="container">
         <div class="section-head reveal">
-          <h2>Four surfaces, one codebase</h2>
-          <p>Customers, sellers and administrators share a single app, each with their own layout, navigation and route guard. Every screenshot below is the real product running on demo data.</p>
+          <h2>Every screen, as it ships.</h2>
+          <p>Customers, sellers and administrators share one app, each with their own layout, navigation and route guard. These are captures of the real product running on demo data.</p>
         </div>
 
         <div class="showcase reveal">
           <div class="tabs" role="tablist" aria-label="Product areas">
-            <button class="tab" type="button" role="tab" id="tab-public" aria-controls="panel-public" aria-selected="true">Public site</button>
-            <button class="tab" type="button" role="tab" id="tab-customer" aria-controls="panel-customer" aria-selected="false" tabindex="-1">Customer account</button>
-            <button class="tab" type="button" role="tab" id="tab-seller" aria-controls="panel-seller" aria-selected="false" tabindex="-1">Seller portal</button>
-            <button class="tab" type="button" role="tab" id="tab-admin" aria-controls="panel-admin" aria-selected="false" tabindex="-1">Admin console</button>
+            <button class="tab" type="button" role="tab" id="tab-public" aria-controls="panel-public" aria-selected="true">Public site <span>07</span></button>
+            <button class="tab" type="button" role="tab" id="tab-customer" aria-controls="panel-customer" aria-selected="false" tabindex="-1">Customer account <span>08</span></button>
+            <button class="tab" type="button" role="tab" id="tab-seller" aria-controls="panel-seller" aria-selected="false" tabindex="-1">Seller portal <span>06</span></button>
+            <button class="tab" type="button" role="tab" id="tab-admin" aria-controls="panel-admin" aria-selected="false" tabindex="-1">Admin console <span>11</span></button>
           </div>
 
           <div class="showcase-body">
             <div class="showcase-side">
               <div class="showcase-panel" role="tabpanel" id="panel-public" aria-labelledby="tab-public">
-                <h3>Where visitors search, compare and reserve</h3>
-                <p>A map-first property search, server-rendered listings and the purchase, lease and tour flows.</p>
-                <ul class="screen-list">
+                <p>Where visitors search, compare and reserve. A map-first property search, server-rendered listings and the purchase, lease and tour flows.</p>
+                <ol class="screen-list">
                   <li><button type="button" class="screen-btn" data-shot="public-home" data-path="/" data-caption="Hero search with Buy, Lease and AI Search tabs, featured listings and a call to action for sellers.">Home</button></li>
                   <li><button type="button" class="screen-btn" data-shot="public-listing-map" data-path="/listing" data-caption="Price pins on a live map, linked to the cards below. Clicking a pin docks a preview of the listing.">Map search</button></li>
                   <li><button type="button" class="screen-btn" data-shot="public-listing-filters" data-path="/listing" data-caption="City and area, property type, price range, rooms and features. Every filter is stored in the URL.">Filters</button></li>
@@ -142,13 +151,12 @@
                   <li><button type="button" class="screen-btn" data-shot="public-detail" data-path="/listing/[slug]" data-caption="Server-rendered listing with pricing, amenities, location map, tour booking and reservation.">Property details</button></li>
                   <li><button type="button" class="screen-btn" data-shot="public-become-seller" data-path="/become-a-seller" data-caption="Seller landing page that leads into the guided business verification wizard.">Become a seller</button></li>
                   <li><button type="button" class="screen-btn" data-shot="public-login" data-path="/login" data-caption="Separate sign-in for customers, sellers and administrators, with Google and Facebook.">Sign in</button></li>
-                </ul>
+                </ol>
               </div>
 
               <div class="showcase-panel" role="tabpanel" id="panel-customer" aria-labelledby="tab-customer" hidden>
-                <h3>Everything a buyer or tenant needs after signing in</h3>
-                <p>Deals, favourites, comparisons, appointments and live chat with sellers.</p>
-                <ul class="screen-list">
+                <p>Everything a buyer or tenant needs after signing in: deals, favourites, comparisons, appointments and live chat with sellers.</p>
+                <ol class="screen-list">
                   <li><button type="button" class="screen-btn" data-shot="customer-deal-tracker" data-path="/dashboard/deals/[id]" data-caption="Each purchase or lease shown stage by stage, with the current checklist and the reservation payment.">Deal tracker</button></li>
                   <li><button type="button" class="screen-btn" data-shot="customer-deals" data-path="/dashboard/deals" data-caption="All purchases and leases in one list, with stage progress, reservation status and price.">My deals</button></li>
                   <li><button type="button" class="screen-btn" data-shot="customer-compare" data-path="/dashboard/compare" data-caption="Up to four properties side by side, with the best value highlighted and a differences-only switch.">Compare</button></li>
@@ -157,26 +165,24 @@
                   <li><button type="button" class="screen-btn" data-shot="customer-appointments" data-path="/dashboard/appointments" data-caption="Upcoming, past and cancelled tours, with reschedule, cancel and add to calendar.">Appointments</button></li>
                   <li><button type="button" class="screen-btn" data-shot="customer-tour" data-path="/listing/[slug]/tour" data-caption="Book an in-person or video tour from the seller's open time slots.">Tour booking</button></li>
                   <li><button type="button" class="screen-btn" data-shot="customer-saved-searches" data-path="/dashboard/saved-searches" data-caption="Saved filters with alerts and one-click access to the latest matches.">Saved searches</button></li>
-                </ul>
+                </ol>
               </div>
 
               <div class="showcase-panel" role="tabpanel" id="panel-seller" aria-labelledby="tab-seller" data-themed hidden>
-                <h3>A workspace for owners and landlords</h3>
-                <p>Listings, tour requests, conversations and payouts, in light and dark.</p>
-                <ul class="screen-list">
+                <p>A workspace for owners and landlords: listings, tour requests, conversations and payouts. Ships in light and dark.</p>
+                <ol class="screen-list">
                   <li><button type="button" class="screen-btn" data-shot="seller-dashboard" data-path="/seller/dashboard" data-caption="Listings, leads, visits and earnings at a glance, with revenue by period and today's priorities.">Dashboard</button></li>
                   <li><button type="button" class="screen-btn" data-shot="seller-properties" data-path="/seller/properties" data-caption="Every sale and rental listing with its status, price and quick actions.">My properties</button></li>
                   <li><button type="button" class="screen-btn" data-shot="seller-create" data-path="/seller/properties/create" data-caption="Guided listing editor with a checklist, drafts and submit for review.">Add a property</button></li>
                   <li><button type="button" class="screen-btn" data-shot="seller-appointments" data-path="/seller/appointments" data-caption="Tour requests in a table and a month calendar, filtered by status.">Appointments</button></li>
                   <li><button type="button" class="screen-btn" data-shot="seller-messages" data-path="/seller/messages" data-caption="Conversations with buyers, with the related listing, templates and quick actions alongside.">Messages</button></li>
                   <li><button type="button" class="screen-btn" data-shot="seller-finance" data-path="/seller/finance" data-caption="Available balance, earnings after platform fees and payout requests.">Finance and earnings</button></li>
-                </ul>
+                </ol>
               </div>
 
               <div class="showcase-panel" role="tabpanel" id="panel-admin" aria-labelledby="tab-admin" data-themed hidden>
-                <h3>Run the whole marketplace from one console</h3>
-                <p>Moderation, verification, deals, finance and platform settings, in light and dark.</p>
-                <ul class="screen-list">
+                <p>The whole marketplace run from one console: moderation, verification, deals, finance and platform settings. Ships in light and dark.</p>
+                <ol class="screen-list">
                   <li><button type="button" class="screen-btn" data-shot="admin-dashboard" data-path="/admin/dashboard" data-caption="Platform totals, revenue by period, a marketplace breakdown and the approval queues.">Dashboard</button></li>
                   <li><button type="button" class="screen-btn" data-shot="admin-properties" data-path="/admin/properties" data-caption="Review queue with moderation, plus flagged and featured listings.">Properties</button></li>
                   <li><button type="button" class="screen-btn" data-shot="admin-bulk" data-path="/admin/properties/bulk" data-caption="Approve, reject, hide, feature or delete up to 100 listings in one batch.">Bulk actions</button></li>
@@ -188,21 +194,26 @@
                   <li><button type="button" class="screen-btn" data-shot="admin-integrations" data-path="/admin/settings/integrations" data-caption="AI search, bank transfer, storage, email and social sign-in, configured without touching code.">Integrations</button></li>
                   <li><button type="button" class="screen-btn" data-shot="admin-checklists" data-path="/admin/settings/checklists" data-caption="Edit the steps each purchase and lease goes through, stage by stage.">Checklist templates</button></li>
                   <li><button type="button" class="screen-btn" data-shot="admin-branding" data-path="/admin/settings" data-caption="Platform name, logo, favicon and brand colours, applied across the site and both portals.">Branding</button></li>
-                </ul>
+                </ol>
               </div>
             </div>
 
             <figure class="showcase-stage">
-              <div class="frame">
-                <div class="frame-bar"><span class="frame-dots"><i></i><i></i><i></i></span><span class="frame-path" id="showcase-path">/</span></div>
-                <button class="frame-zoom" type="button" id="showcase-zoom" aria-label="Enlarge screenshot">
-                  <img id="showcase-shot" alt="Home" width="1920" height="1200" loading="lazy" decoding="async" sizes="(min-width: 1000px) 820px, 94vw" data-light="public-home" data-dark="public-home"
-                    src="assets/img/screens/public-home-960.webp" srcset="assets/img/screens/public-home-960.webp 960w, assets/img/screens/public-home-1920.webp 1920w">
-                </button>
-              </div>
+              <button class="zoom" type="button" id="showcase-zoom" aria-label="Enlarge screenshot">
+                <img class="shot" id="showcase-shot" alt="Home" width="1920" height="1200" loading="lazy" decoding="async" sizes="(min-width: 1000px) 860px, 94vw" data-light="public-home" data-dark="public-home"
+                  src="assets/img/screens/public-home-960.webp" srcset="assets/img/screens/public-home-960.webp 960w, assets/img/screens/public-home-1920.webp 1920w">
+              </button>
               <figcaption>
-                <span id="showcase-caption">Hero search with Buy, Lease and AI Search tabs, featured listings and a call to action for sellers.</span>
-                <button class="text-btn" type="button" id="showcase-enlarge"><svg class="icon"><use href="#i-expand"/></svg>Enlarge</button>
+                <div class="stage-meta">
+                  <code id="showcase-path">/</code>
+                  <div class="stage-nav">
+                    <span class="stage-count" id="showcase-count">01 / 07</span>
+                    <button class="icon-btn" type="button" id="showcase-prev" aria-label="Previous screen"><svg class="icon"><use href="#i-left"/></svg></button>
+                    <button class="icon-btn" type="button" id="showcase-next" aria-label="Next screen"><svg class="icon"><use href="#i-right"/></svg></button>
+                    <button class="icon-btn" type="button" id="showcase-enlarge" aria-label="Enlarge screenshot"><svg class="icon"><use href="#i-expand"/></svg></button>
+                  </div>
+                </div>
+                <p id="showcase-caption">Hero search with Buy, Lease and AI Search tabs, featured listings and a call to action for sellers.</p>
               </figcaption>
             </figure>
           </div>
@@ -210,132 +221,151 @@
       </div>
     </section>
 
-    <section class="section section-tint" id="features">
+    <section class="section" id="features">
       <div class="container">
         <div class="section-head reveal">
-          <h2>The hard parts are already built</h2>
-          <p>Search, deals, verification and money are the features that take months. They ship finished.</p>
+          <h2>The parts that take months.</h2>
+          <p>Search, deals, verification and money are the slow features of any marketplace. Here they are built, connected to the API and documented.</p>
         </div>
 
-        <div class="feature-row reveal">
-          <div class="feature-copy">
-            <h3>Map-first search that keeps its state in the URL</h3>
-            <p>Buyers browse price pins on a live map, narrow down with a filter panel, or describe what they want in a sentence. Every search can be bookmarked, shared or restored with the back button.</p>
-            <ul class="checks">
-              <li><svg class="icon"><use href="#i-check"/></svg>Leaflet with OpenStreetMap tiles, so no map API key is needed</li>
-              <li><svg class="icon"><use href="#i-check"/></svg>Radius search from a dropped pin or the visitor's location</li>
-              <li><svg class="icon"><use href="#i-check"/></svg>Search as you type, with inputs validated and bounded</li>
-              <li><svg class="icon"><use href="#i-check"/></svg>AI search turns a sentence into ordinary filters</li>
-            </ul>
-          </div>
-          <div class="feature-media">
-            <div class="frame">
-              <div class="frame-bar"><span class="frame-dots"><i></i><i></i><i></i></span><span class="frame-path">/listing</span></div>
-              <img alt="Listing search with the filter panel open beside a map of price pins" width="1920" height="1200" loading="lazy" decoding="async" sizes="(min-width: 1000px) 660px, 94vw"
+        <ol class="features">
+          <li class="feature reveal">
+            <div class="feature-copy">
+              <h3>Map-first search that keeps its state in the URL</h3>
+              <p>Buyers browse price pins on a live map, narrow down with a filter panel, or describe what they want in a sentence. Every search can be bookmarked, shared or restored with the back button.</p>
+              <ul class="facts">
+                <li>Leaflet with OpenStreetMap tiles, so no map API key</li>
+                <li>Radius search from a dropped pin or the visitor's location</li>
+                <li>AI search turns a sentence into ordinary filters</li>
+              </ul>
+            </div>
+            <button class="zoom feature-media" type="button" data-zoom="public-listing-filters" data-title="Map search with filters" aria-label="Enlarge screenshot">
+              <img class="shot" alt="Listing search with the filter panel open beside a map of price pins" width="1920" height="1200" loading="lazy" decoding="async" sizes="(min-width: 1000px) 640px, 94vw"
                 src="assets/img/screens/public-listing-filters-960.webp" srcset="assets/img/screens/public-listing-filters-960.webp 960w, assets/img/screens/public-listing-filters-1920.webp 1920w">
-            </div>
-          </div>
-        </div>
+            </button>
+          </li>
 
-        <div class="feature-row feature-row-flip reveal">
-          <div class="feature-copy">
-            <h3>Deals tracked from reservation to handover</h3>
-            <p>A buyer reserves a property, uploads payment proof and follows the deal stage by stage. On the other side, administrators work through a checklist for each transaction and complete each stage.</p>
-            <ul class="checks">
-              <li><svg class="icon"><use href="#i-check"/></svg>Purchase and lease flows with their own stages</li>
-              <li><svg class="icon"><use href="#i-check"/></svg>Stages and checklist items come from the server</li>
-              <li><svg class="icon"><use href="#i-check"/></svg>Checklist templates are editable in admin settings</li>
-            </ul>
-          </div>
-          <div class="feature-media feature-media-pair">
-            <div class="frame">
-              <div class="frame-bar"><span class="frame-dots"><i></i><i></i><i></i></span><span class="frame-path">/dashboard/deals/[id]</span></div>
-              <img alt="Customer deal tracker showing a purchase at stage two of four with its checklist" width="1920" height="1200" loading="lazy" decoding="async" sizes="(min-width: 1000px) 600px, 86vw"
+          <li class="feature reveal">
+            <div class="feature-copy">
+              <h3>Deals tracked from reservation to handover</h3>
+              <p>A buyer reserves a property, uploads payment proof and follows the deal stage by stage. Administrators work through a checklist for each transaction and complete each stage.</p>
+              <ul class="facts">
+                <li>Purchase and lease flows with their own stages</li>
+                <li>Stages and checklist items come from the server</li>
+                <li>Checklist templates are editable in admin settings</li>
+              </ul>
+            </div>
+            <button class="zoom feature-media" type="button" data-zoom="customer-deal-tracker" data-title="Deal tracker" aria-label="Enlarge screenshot">
+              <img class="shot" alt="Customer deal tracker showing a purchase at stage two of four with its checklist" width="1920" height="1200" loading="lazy" decoding="async" sizes="(min-width: 1000px) 640px, 94vw"
                 src="assets/img/screens/customer-deal-tracker-960.webp" srcset="assets/img/screens/customer-deal-tracker-960.webp 960w, assets/img/screens/customer-deal-tracker-1920.webp 1920w">
-            </div>
-            <div class="frame frame-inset">
-              <div class="frame-bar"><span class="frame-dots"><i></i><i></i><i></i></span><span class="frame-path">/admin/deals</span></div>
-              <img alt="Admin deal checklist for the same purchase" width="1920" height="1200" loading="lazy" decoding="async" sizes="(min-width: 1000px) 380px, 56vw"
-                src="assets/img/screens/admin-deal-detail-light-960.webp" data-light="admin-deal-detail-light" data-dark="admin-deal-detail-dark">
-            </div>
-          </div>
-        </div>
+            </button>
+          </li>
 
-        <div class="bento reveal">
-          <article class="bento-card">
-            <h3>Verification built in</h3>
-            <p>A six-step identity check for customers and a business verification wizard for sellers, reviewed from a single admin queue.</p>
-            <div class="bento-media"><img alt="Admin KYC and KYB verification queue" width="1920" height="1200" loading="lazy" decoding="async" sizes="(min-width: 800px) 760px, 130vw" src="assets/img/screens/admin-verifications-light-960.webp" data-light="admin-verifications-light" data-dark="admin-verifications-dark"></div>
-          </article>
-          <article class="bento-card">
-            <h3>Finance for both sides</h3>
-            <p>Sellers see earnings after platform fees and request payouts. Administrators verify payments and transfer approved payouts in batches.</p>
-            <div class="bento-media"><img alt="Seller finance page with balance and earnings table" width="1920" height="1200" loading="lazy" decoding="async" sizes="(min-width: 800px) 760px, 130vw" src="assets/img/screens/seller-finance-light-960.webp" data-light="seller-finance-light" data-dark="seller-finance-dark"></div>
-          </article>
-          <article class="bento-card">
-            <h3>Real-time messaging</h3>
-            <p>WebSocket chat between buyers and sellers with typing indicators, read receipts, attachments and a floating chat dock that follows the visitor across pages.</p>
-            <div class="bento-media"><img alt="Seller messages page with an open conversation" width="1920" height="1200" loading="lazy" decoding="async" sizes="(min-width: 800px) 760px, 130vw" src="assets/img/screens/seller-messages-light-960.webp" data-light="seller-messages-light" data-dark="seller-messages-dark"></div>
-          </article>
-          <article class="bento-card">
-            <h3>Rebrand without a rebuild</h3>
-            <p>Platform name, logo and brand colours load from the API. Change them in the admin console and the site and both portals follow.</p>
-            <div class="bento-media"><img alt="Admin branding settings with logo upload and brand colours" width="1920" height="1200" loading="lazy" decoding="async" sizes="(min-width: 800px) 760px, 130vw" src="assets/img/screens/admin-branding-light-960.webp" data-light="admin-branding-light" data-dark="admin-branding-dark"></div>
-          </article>
-        </div>
+          <li class="feature reveal">
+            <div class="feature-copy">
+              <h3>Identity and business verification</h3>
+              <p>Customers complete a six-step identity check. Sellers apply through a guided business verification wizard. Administrators review both from a single queue.</p>
+              <ul class="facts">
+                <li>Document and selfie upload with previews</li>
+                <li>Status shown on the profile and the seller application</li>
+              </ul>
+            </div>
+            <button class="zoom feature-media" type="button" data-zoom="admin-verifications" data-themed data-title="KYC and KYB verification" aria-label="Enlarge screenshot">
+              <img class="shot" alt="Admin KYC and KYB verification queue" width="1920" height="1200" loading="lazy" decoding="async" sizes="(min-width: 1000px) 640px, 94vw" src="assets/img/screens/admin-verifications-light-960.webp" data-light="admin-verifications-light" data-dark="admin-verifications-dark">
+            </button>
+          </li>
 
-        <ul class="also reveal">
-          <li><strong>SEO built in</strong>Dynamic metadata, canonical URLs, Open Graph tags, sitemap, robots and listing structured data.</li>
-          <li><strong>AI search</strong>OpenAI, Anthropic or Gemini, chosen and switched on from the admin console.</li>
-          <li><strong>Social sign-in</strong>Google and Facebook, enabled and configured without code changes.</li>
-          <li><strong>Tour booking</strong>In-person or video tours booked from the seller's available time slots.</li>
-          <li><strong>Saved searches</strong>Saved from the listing page, with alerts and one-click restore.</li>
-          <li><strong>Reviews</strong>Customers rate completed deals. Administrators hide or delete reviews.</li>
-          <li><strong>Announcements</strong>Platform-wide messages with per-channel delivery.</li>
-          <li><strong>Notification centre</strong>Live updates for all three audiences, with per-category preferences.</li>
-          <li><strong>Session security</strong>Silent token refresh, an active sessions list and sign out everywhere.</li>
-        </ul>
+          <li class="feature reveal">
+            <div class="feature-copy">
+              <h3>Finance for both sides of the deal</h3>
+              <p>Sellers see what each property earns after platform fees and request payouts. Administrators verify payments, record manual ones and transfer approved payouts in batches.</p>
+              <ul class="facts">
+                <li>Commission and reservation rules set in admin</li>
+                <li>Payments export to CSV</li>
+              </ul>
+            </div>
+            <button class="zoom feature-media" type="button" data-zoom="seller-finance" data-themed data-title="Finance and earnings" aria-label="Enlarge screenshot">
+              <img class="shot" alt="Seller finance page with balance and earnings table" width="1920" height="1200" loading="lazy" decoding="async" sizes="(min-width: 1000px) 640px, 94vw" src="assets/img/screens/seller-finance-light-960.webp" data-light="seller-finance-light" data-dark="seller-finance-dark">
+            </button>
+          </li>
+
+          <li class="feature reveal">
+            <div class="feature-copy">
+              <h3>Real-time messaging and notifications</h3>
+              <p>Buyers and sellers chat over WebSockets, with typing indicators, read receipts and image attachments. A floating chat dock follows the visitor from page to page.</p>
+              <ul class="facts">
+                <li>Notification centre for all three audiences</li>
+                <li>Per-category notification preferences</li>
+              </ul>
+            </div>
+            <button class="zoom feature-media" type="button" data-zoom="seller-messages" data-themed data-title="Messages" aria-label="Enlarge screenshot">
+              <img class="shot" alt="Seller messages page with an open conversation" width="1920" height="1200" loading="lazy" decoding="async" sizes="(min-width: 1000px) 640px, 94vw" src="assets/img/screens/seller-messages-light-960.webp" data-light="seller-messages-light" data-dark="seller-messages-dark">
+            </button>
+          </li>
+
+          <li class="feature reveal">
+            <div class="feature-copy">
+              <h3>Rebrand it without a rebuild</h3>
+              <p>The platform name, logo and brand colours load from the API. Change them in the admin console and the public site and both portals follow.</p>
+              <ul class="facts">
+                <li>Storage, email, bank transfer and social sign-in set up in admin</li>
+                <li>Saved secrets are write-only</li>
+              </ul>
+            </div>
+            <button class="zoom feature-media" type="button" data-zoom="admin-branding" data-themed data-title="Branding settings" aria-label="Enlarge screenshot">
+              <img class="shot" alt="Admin branding settings with logo upload and brand colours" width="1920" height="1200" loading="lazy" decoding="async" sizes="(min-width: 1000px) 640px, 94vw" src="assets/img/screens/admin-branding-light-960.webp" data-light="admin-branding-light" data-dark="admin-branding-dark">
+            </button>
+          </li>
+        </ol>
+
+        <dl class="also reveal">
+          <div><dt>SEO</dt><dd>Dynamic metadata, canonical URLs, Open Graph tags, sitemap, robots and listing structured data.</dd></div>
+          <div><dt>AI search</dt><dd>OpenAI, Anthropic or Gemini, chosen and switched on from the admin console.</dd></div>
+          <div><dt>Social sign-in</dt><dd>Google and Facebook, enabled and configured without code changes.</dd></div>
+          <div><dt>Tour booking</dt><dd>In-person or video tours booked from the seller's available time slots.</dd></div>
+          <div><dt>Saved searches</dt><dd>Saved from the listing page, with alerts and one-click restore.</dd></div>
+          <div><dt>Reviews</dt><dd>Customers rate completed deals. Administrators hide or delete reviews.</dd></div>
+          <div><dt>Announcements</dt><dd>Platform-wide messages with per-channel delivery.</dd></div>
+          <div><dt>Sessions</dt><dd>Silent token refresh, an active sessions list and sign out everywhere.</dd></div>
+        </dl>
       </div>
     </section>
 
     <section class="section" id="themes">
       <div class="container">
         <div class="section-head reveal">
-          <h2>Light and dark, built from tokens</h2>
+          <h2>Light and dark, from one set of tokens.</h2>
           <p>The seller portal and admin console ship in both themes. The saved choice is applied before first paint, so there is no flash on load. Drag the handle to compare.</p>
         </div>
 
         <div class="compare reveal" id="compare" style="--pos: 50%">
-          <div class="frame">
-            <div class="frame-bar"><span class="frame-dots"><i></i><i></i><i></i></span><span class="frame-path">/seller/dashboard</span></div>
-            <div class="compare-stage">
-              <img alt="Seller dashboard in the light theme" width="1920" height="1200" loading="lazy" decoding="async" sizes="(min-width: 1140px) 1040px, 94vw"
-                src="assets/img/screens/seller-dashboard-light-960.webp" srcset="assets/img/screens/seller-dashboard-light-960.webp 960w, assets/img/screens/seller-dashboard-light-1920.webp 1920w">
-              <img class="compare-top" alt="Seller dashboard in the dark theme" width="1920" height="1200" loading="lazy" decoding="async" sizes="(min-width: 1140px) 1040px, 94vw"
-                src="assets/img/screens/seller-dashboard-dark-960.webp" srcset="assets/img/screens/seller-dashboard-dark-960.webp 960w, assets/img/screens/seller-dashboard-dark-1920.webp 1920w">
-              <span class="compare-label compare-label-dark">Dark</span>
-              <span class="compare-label compare-label-light">Light</span>
-              <span class="compare-handle" aria-hidden="true"><svg class="icon"><use href="#i-drag"/></svg></span>
-              <input class="compare-range" type="range" min="0" max="100" value="50" step="0.1" aria-label="Reveal the light or dark theme">
-            </div>
+          <div class="compare-stage shot">
+            <img alt="Seller dashboard in the light theme" width="1920" height="1200" loading="lazy" decoding="async" sizes="(min-width: 1300px) 1200px, 94vw"
+              src="assets/img/screens/seller-dashboard-light-960.webp" srcset="assets/img/screens/seller-dashboard-light-960.webp 960w, assets/img/screens/seller-dashboard-light-1920.webp 1920w">
+            <img class="compare-top" alt="Seller dashboard in the dark theme" width="1920" height="1200" loading="lazy" decoding="async" sizes="(min-width: 1300px) 1200px, 94vw"
+              src="assets/img/screens/seller-dashboard-dark-960.webp" srcset="assets/img/screens/seller-dashboard-dark-960.webp 960w, assets/img/screens/seller-dashboard-dark-1920.webp 1920w">
+            <span class="compare-label compare-label-dark">Dark</span>
+            <span class="compare-label compare-label-light">Light</span>
+            <span class="compare-handle" aria-hidden="true"><svg class="icon"><use href="#i-drag"/></svg></span>
+            <input class="compare-range" type="range" min="0" max="100" value="50" step="0.1" aria-label="Reveal the light or dark theme">
           </div>
         </div>
       </div>
     </section>
 
-    <section class="section section-tint" id="responsive">
+    <section class="section" id="responsive">
       <div class="container">
         <div class="section-head reveal">
-          <h2>Responsive from phone to desktop</h2>
-          <p>Layouts are built mobile-first. Tables switch to cards on small screens, filters move into a sheet and portal navigation collapses into a drawer.</p>
+          <h2>Designed for the phone first.</h2>
+          <p>Tables switch to cards on small screens, filters move into a sheet and portal navigation collapses into a drawer.</p>
         </div>
 
         <ul class="phones reveal">
-          <li><div class="phone"><img alt="Home page on a phone" width="640" height="1385" loading="lazy" decoding="async" src="assets/img/screens/mobile-home-640.webp"></div><span>Home</span></li>
-          <li><div class="phone"><img alt="Map search on a phone" width="640" height="1385" loading="lazy" decoding="async" src="assets/img/screens/mobile-listing-640.webp"></div><span>Map search</span></li>
-          <li><div class="phone"><img alt="Property details on a phone" width="640" height="1385" loading="lazy" decoding="async" src="assets/img/screens/mobile-detail-640.webp"></div><span>Property details</span></li>
-          <li><div class="phone"><img alt="Deal tracker on a phone" width="640" height="1385" loading="lazy" decoding="async" src="assets/img/screens/mobile-deal-640.webp"></div><span>Deal tracker</span></li>
-          <li><div class="phone"><img alt="Seller dashboard in dark theme on a phone" width="640" height="1385" loading="lazy" decoding="async" src="assets/img/screens/mobile-seller-dark-640.webp"></div><span>Seller dashboard</span></li>
+          <li><div class="phone"><img alt="Home page on a phone" width="640" height="1385" loading="lazy" decoding="async" src="assets/img/screens/mobile-home-640.webp"></div><code>/</code></li>
+          <li><div class="phone"><img alt="Map search on a phone" width="640" height="1385" loading="lazy" decoding="async" src="assets/img/screens/mobile-listing-640.webp"></div><code>/listing</code></li>
+          <li><div class="phone"><img alt="Property details on a phone" width="640" height="1385" loading="lazy" decoding="async" src="assets/img/screens/mobile-detail-640.webp"></div><code>/listing/[slug]</code></li>
+          <li><div class="phone"><img alt="Deal tracker on a phone" width="640" height="1385" loading="lazy" decoding="async" src="assets/img/screens/mobile-deal-640.webp"></div><code>/dashboard/deals/[id]</code></li>
+          <li><div class="phone"><img alt="Seller dashboard in dark theme on a phone" width="640" height="1385" loading="lazy" decoding="async" src="assets/img/screens/mobile-seller-dark-640.webp"></div><code>/seller/dashboard</code></li>
         </ul>
       </div>
     </section>
@@ -343,50 +373,54 @@
     <section class="section" id="stack">
       <div class="container">
         <div class="section-head reveal">
-          <h2>A stack your team already knows</h2>
-          <p>Current versions, strict TypeScript and a domain-based folder structure that stays readable as it grows.</p>
+          <h2>A stack your team already knows.</h2>
+          <p>Current versions, strict TypeScript and a domain-based folder structure that stays readable as the product grows.</p>
         </div>
 
         <div class="stack reveal">
-          <dl class="stack-table">
-            <div><dt>Framework</dt><dd>Next.js 16, App Router and React Server Components</dd></div>
-            <div><dt>UI runtime</dt><dd>React 19</dd></div>
-            <div><dt>Language</dt><dd>TypeScript 5, strict mode</dd></div>
-            <div><dt>Styling</dt><dd>Tailwind CSS 4 with design tokens</dd></div>
-            <div><dt>Components</dt><dd>shadcn/ui on Base UI primitives</dd></div>
-            <div><dt>Server state</dt><dd>Redux Toolkit and RTK Query</dd></div>
-            <div><dt>Forms</dt><dd>React Hook Form and Zod</dd></div>
-            <div><dt>Maps</dt><dd>Leaflet and React Leaflet</dd></div>
-            <div><dt>Charts</dt><dd>Recharts</dd></div>
-            <div><dt>Icons</dt><dd>Lucide</dd></div>
-          </dl>
-
-          <div class="stack-notes">
-            <div>
-              <h3>One app, three audiences</h3>
-              <p>Each portal has its own layout, navigation and route guard, built on a shared portal shell.</p>
-            </div>
-            <div>
-              <h3>Server-rendered where it matters</h3>
-              <p>Property pages resolve on the server for a fast first paint and complete metadata.</p>
-            </div>
-            <div>
-              <h3>One API layer</h3>
-              <p>RTK Query attaches the access token and refreshes it once on a 401. Concurrent requests share one refresh.</p>
-            </div>
-            <div>
-              <h3>Documented design system</h3>
-              <p>Colour tokens, type scale, spacing, radii and every reusable component are written down in the docs folder.</p>
-            </div>
+          <div class="code">
+            <div class="code-name">package.json</div>
+<pre><code><span class="k">"next"</span>: <span class="v">"16.3.3"</span>,
+<span class="k">"react"</span>: <span class="v">"19.2.8"</span>,
+<span class="k">"typescript"</span>: <span class="v">"^5"</span>,
+<span class="k">"tailwindcss"</span>: <span class="v">"^4"</span>,
+<span class="k">"@base-ui/react"</span>: <span class="v">"^1.7.0"</span>,
+<span class="k">"@reduxjs/toolkit"</span>: <span class="v">"^2.12.0"</span>,
+<span class="k">"react-hook-form"</span>: <span class="v">"^7.86.0"</span>,
+<span class="k">"zod"</span>: <span class="v">"^4.4.3"</span>,
+<span class="k">"leaflet"</span>: <span class="v">"^1.9.4"</span>,
+<span class="k">"recharts"</span>: <span class="v">"^3.10.1"</span>,
+<span class="k">"lucide-react"</span>: <span class="v">"^1.34.0"</span></code></pre>
           </div>
+
+          <div class="code">
+            <div class="code-name">Project structure</div>
+<pre><code><span class="k">app/</span>
+  <span class="k">(public)/</span>     <span class="c">site, search, property pages, deal flows</span>
+  <span class="k">(auth)/</span>       <span class="c">sign-in, registration, recovery</span>
+  <span class="k">(portal)/</span>     <span class="c">customer, seller and admin areas</span>
+<span class="k">components/</span>     <span class="c">ui primitives, layout, portal shell</span>
+<span class="k">features/</span>       <span class="c">properties, account, seller, admin, auth</span>
+<span class="k">config/</span>         <span class="c">navigation for the site and each portal</span>
+<span class="k">lib/</span>            <span class="c">utilities, API and site configuration</span>
+<span class="k">store/</span>          <span class="c">Redux store and the base RTK Query API</span>
+<span class="k">docs/</span>           <span class="c">design system, component inventory</span></code></pre>
+          </div>
+
+          <dl class="notes">
+            <div><dt>One app, three audiences</dt><dd>Each portal has its own layout, navigation and route guard, built on a shared portal shell.</dd></div>
+            <div><dt>Server-rendered where it matters</dt><dd>Property pages resolve on the server for a fast first paint and complete metadata.</dd></div>
+            <div><dt>One API layer</dt><dd>RTK Query attaches the access token and refreshes it once on a 401. Concurrent requests share one refresh.</dd></div>
+            <div><dt>Documented design system</dt><dd>Colour tokens, type scale, spacing, radii and every reusable component are written down in the docs folder.</dd></div>
+          </dl>
         </div>
       </div>
     </section>
 
-    <section class="section section-tint" id="faq">
-      <div class="container faq">
-        <div class="section-head section-head-left reveal">
-          <h2>Questions before you buy</h2>
+    <section class="section" id="faq">
+      <div class="container">
+        <div class="section-head reveal">
+          <h2>Before you buy.</h2>
           <p>The practical details of running and customising EstateHub.</p>
         </div>
 
@@ -423,14 +457,14 @@
       </div>
     </section>
 
-    <section class="cta-band">
-      <div class="container">
-        <div class="cta-inner">
-          <h2>Start with a finished marketplace front end.</h2>
-          <p>Public site, customer account, seller portal and admin console, ready to make yours.</p>
-          <div class="hero-actions">
-            <a class="btn btn-light" data-link="purchase" target="_blank" rel="noopener" hidden>Buy on CodeCanyon <svg class="icon"><use href="#i-arrow"/></svg></a>
-            <a class="btn btn-ghost-light" data-link="demo" target="_blank" rel="noopener" hidden>Live demo</a>
+    <section class="closing">
+      <div class="container closing-inner">
+        <h2>Start with it<br>already built.</h2>
+        <div class="closing-side">
+          <p>See it running in the live demo, then make it yours.</p>
+          <div class="actions">
+            <a class="btn btn-invert" data-link="purchase" target="_blank" rel="noopener">Buy on CodeCanyon</a>
+            <a class="btn btn-invert-line" data-link="demo" target="_blank" rel="noopener">Open the live demo <svg class="icon"><use href="#i-out"/></svg></a>
           </div>
         </div>
       </div>
@@ -440,7 +474,7 @@
   <footer class="site-footer">
     <div class="container footer-inner">
       <a class="brand" href="#top" aria-label="EstateHub home">
-        <img src="assets/img/logo.svg" alt="" width="24" height="24">
+        <img src="assets/img/logo.svg" alt="" width="22" height="22">
         <span>EstateHub</span>
       </a>
       <nav aria-label="Footer">
@@ -450,9 +484,14 @@
         <a href="#stack">Stack</a>
         <a href="#faq">FAQ</a>
       </nav>
-      <p>© 2026 EstateHub. All rights reserved.</p>
+      <p>© 2026 EstateHub</p>
     </div>
   </footer>
+
+  <div class="buybar" id="buybar">
+    <a class="btn btn-line" data-link="demo" target="_blank" rel="noopener">Live demo</a>
+    <a class="btn btn-solid" data-link="purchase" target="_blank" rel="noopener">Buy on CodeCanyon</a>
+  </div>
 
   <dialog class="lightbox" id="lightbox" aria-label="Screenshot viewer">
     <div class="lightbox-bar">
