@@ -1,49 +1,37 @@
 WEBVTT
 
-1
-00:00:00.100 --> 00:00:06.435
+00:00:00.100 --> 00:00:05.910
 This is EstateHub. A complete property marketplace front end, built with Next.js 16.
 
-2
-00:00:06.885 --> 00:00:14.244
+00:00:06.410 --> 00:00:13.306
 Buyers search on a live map. Every pin is a price, and every filter is saved in the link, so a search can be shared.
 
-3
-00:00:14.694 --> 00:00:20.820
+00:00:13.806 --> 00:00:19.408
 They open a listing, book a tour in a slot the seller has free, and reserve the home by bank transfer.
 
-4
-00:00:21.270 --> 00:00:28.480
+00:00:20.408 --> 00:00:27.092
 From then on, the deal is tracked stage by stage. The buyer always knows what has been done and what comes next.
 
-5
-00:00:28.930 --> 00:00:33.500
+00:00:27.592 --> 00:00:31.882
 They can compare homes side by side, and chat with the seller in real time.
 
-6
-00:00:33.950 --> 00:00:40.912
+00:00:33.282 --> 00:00:39.573
 Sellers get their own portal. They add listings, handle tour requests, and see what each property has earned.
 
-7
-00:00:41.362 --> 00:00:44.065
+00:00:40.573 --> 00:00:42.953
 Both portals come in light and in dark.
 
-8
-00:00:45.715 --> 00:00:58.821
+00:00:44.853 --> 00:00:57.217
 Your team runs everything from the admin console. Approve listings one at a time, or a hundred in a batch. Verify identities. Work through each deal from a checklist. Confirm payments and send payouts.
 
-9
-00:00:59.271 --> 00:01:04.980
+00:00:58.917 --> 00:01:04.077
 Change the name, the logo and the brand colours from settings. No code, and no rebuild.
 
-10
-00:01:05.430 --> 00:01:07.193
+00:01:04.977 --> 00:01:06.676
 And all of it works on a phone.
 
-11
-00:01:09.443 --> 00:01:16.243
+00:01:08.976 --> 00:01:15.302
 Seventy-three pages. Next.js 16, React 19, TypeScript and Tailwind.
 
-12
-00:01:16.693 --> 00:01:19.420
+00:01:15.802 --> 00:01:18.372
 EstateHub. Start with it already built.
