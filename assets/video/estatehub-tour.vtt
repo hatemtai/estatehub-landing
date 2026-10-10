@@ -3,38 +3,41 @@ WEBVTT
 00:00:00.100 --> 00:00:08.115
 This is EstateHub. A complete property marketplace: a Next.js front end and a Django back end, in one package.
 
-00:00:08.615 --> 00:00:15.755
+00:00:09.815 --> 00:00:16.955
 Buyers search on a live map. Every pin is a price, and every filter is saved in the link, so a search can be shared.
 
-00:00:16.855 --> 00:00:22.928
+00:00:18.055 --> 00:00:28.587
+Or they just describe it. AI search turns one sentence into filters and returns the listings that match. It works with OpenAI, Anthropic or Gemini.
+
+00:00:29.887 --> 00:00:35.960
 They open a listing, book a tour in a slot the seller has free, and reserve the home by bank transfer.
 
-00:00:23.928 --> 00:00:30.833
+00:00:36.960 --> 00:00:43.865
 From then on, the deal is tracked stage by stage. The buyer always knows what has been done and what comes next.
 
-00:00:31.333 --> 00:00:35.721
+00:00:44.365 --> 00:00:48.753
 They can compare homes side by side, and chat with the seller in real time.
 
-00:00:37.321 --> 00:00:43.693
+00:00:50.353 --> 00:00:56.725
 Sellers get their own portal. They add listings, handle tour requests, and see what each property has earned.
 
-00:00:44.693 --> 00:00:47.118
+00:00:57.725 --> 00:01:00.150
 Both portals come in light and in dark.
 
-00:00:49.018 --> 00:01:02.259
+00:01:02.050 --> 00:01:15.291
 Your team runs everything from the admin console. Approve listings one at a time, or a hundred in a batch. Verify identities. Work through each deal from a checklist. Confirm payments and send payouts.
 
-00:01:03.959 --> 00:01:09.606
+00:01:16.991 --> 00:01:22.638
 Change the name, the logo and the brand colours from settings. No code, and no rebuild.
 
-00:01:10.506 --> 00:01:12.270
+00:01:23.538 --> 00:01:25.302
 And all of it works on a phone.
 
-00:01:14.570 --> 00:01:29.561
+00:01:27.602 --> 00:01:42.593
 The back end is included too. It is a Django REST API on Django 5.2, with security fixes until 2028. 182 documented routes, real-time chat and Django's own admin.
 
-00:01:30.661 --> 00:01:42.900
+00:01:43.693 --> 00:01:55.932
 Seventy-three finished pages, across the website, the buyer account, the seller portal and the admin console. Built on Next.js 16, React 19, TypeScript, Tailwind and Django.
 
-00:01:44.200 --> 00:01:46.689
+00:01:57.232 --> 00:01:59.721
 EstateHub. Start with it already built.
