@@ -62,7 +62,7 @@ To replace one, export the new image at the same size and file name. To add a sc
 
 ## Product tour video
 
-"Watch the 90-second tour" in the hero opens `assets/video/estatehub-tour.mp4` in a dialog. The file is only downloaded when a visitor opens it.
+"Watch the tour" in the hero opens `assets/video/estatehub-tour.mp4` in a dialog. The file is only downloaded when a visitor opens it.
 
 The video is built in the sibling `estatehub-video` folder. To change the narration or a scene, edit `script.json` there and run `npm run build`. To use a recorded voice, save one file per scene as `audio/<scene id>.wav` (`.mp3` and `.m4a` also work); the build uses a recording where one exists and the system voice otherwise, and retimes the scene to fit. `npm run voice` generates those files with ElevenLabs once `ELEVENLABS_API_KEY` is set in `estatehub-video/.env`.
 
