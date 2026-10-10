@@ -1,37 +1,40 @@
 WEBVTT
 
-00:00:00.100 --> 00:00:06.493
-This is EstateHub. A property marketplace with a Next.js front end and a Django back end.
+00:00:00.100 --> 00:00:10.867
+Building a property marketplace takes months. EstateHub is that marketplace, already built: the website, the seller portal, the admin console and the back end behind them.
 
-00:00:07.893 --> 00:00:15.033
-Buyers search on a live map. Every pin is a price, and every filter is saved in the link, so a search can be shared.
+00:00:12.767 --> 00:00:18.798
+Your visitors search on a live map. Every pin is a price, and every search is a link they can share.
 
-00:00:16.133 --> 00:00:24.617
-Or they just describe it. AI search turns one sentence into filters. It works with OpenAI, Anthropic or Gemini.
+00:00:19.898 --> 00:00:32.414
+Or they just describe what they want. AI search turns one sentence into filters and shows the homes that match. It runs on OpenAI, Anthropic or Gemini, whichever you choose.
 
-00:00:25.717 --> 00:00:31.790
-They open a listing, book a tour in a slot the seller has free, and reserve the home by bank transfer.
+00:00:33.714 --> 00:00:39.510
+When they find a home, they book a tour in a slot the seller has free, and reserve it by bank transfer.
 
-00:00:32.790 --> 00:00:39.162
-Sellers get their own portal. They add listings, handle tour requests, and see what each property has earned.
+00:00:40.510 --> 00:00:47.415
+From then on, the deal is tracked stage by stage. Your buyer always knows what has been done and what comes next.
 
-00:00:40.162 --> 00:00:42.587
+00:00:47.915 --> 00:00:52.303
+They can compare homes side by side, and chat with the seller in real time.
+
+00:00:53.903 --> 00:01:03.923
+Sellers look after themselves. In their own portal they add listings, answer tour requests on a calendar, and see what each property has earned after your commission.
+
+00:01:05.423 --> 00:01:07.848
 Both portals come in light and in dark.
 
-00:00:44.087 --> 00:00:52.934
-Your team runs everything from the admin console. Approve listings in bulk, verify identities, confirm payments and send payouts.
+00:01:09.748 --> 00:01:25.059
+You stay in control. Your team runs everything from one admin console. They approve listings one at a time, or a hundred in a batch. They verify identities. They work through each deal from a checklist. They confirm payments and send payouts.
 
-00:00:54.134 --> 00:00:59.781
-Change the name, the logo and the brand colours from settings. No code, and no rebuild.
+00:01:26.759 --> 00:01:41.835
+And it is yours to shape. Change the name, the logo and the brand colours from settings. Connect storage, email, sign-in and AI search from one screen. Even the steps of a deal are yours to edit. No code, and no rebuild.
 
-00:01:00.681 --> 00:01:02.445
+00:01:43.135 --> 00:01:44.899
 And all of it works on a phone.
 
-00:01:04.345 --> 00:01:15.496
-The Django back end is included, with security fixes until 2028. 182 API routes, real-time chat and Django's own admin.
+00:01:47.199 --> 00:02:04.835
+You get the full source of both sides: the Next.js front end and the Django back end. Django's own admin panel, a documented API, real-time chat and demo data come with it, so your developers can extend it, or build a mobile app on the same API.
 
-00:01:16.396 --> 00:01:23.536
-Seventy-three finished pages, built on Next.js 16, React 19, TypeScript, Tailwind and Django.
-
-00:01:24.636 --> 00:01:27.125
-EstateHub. Start with it already built.
+00:02:06.735 --> 00:02:12.446
+Launch sooner, under your own brand, on code you own. EstateHub. Start with it already built.
