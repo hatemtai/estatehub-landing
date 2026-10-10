@@ -21,7 +21,7 @@ window.ESTATEHUB_LINKS = {
 };
 ```
 
-A button is shown only when its URL is filled in. With both empty, the page shows no "Live demo" or "Buy" buttons and hides the closing call-to-action band.
+The "Live demo" and "Buy" buttons appear in the header, the hero, the closing band and the purchase bar on phones. They all read these two values. While a value is empty its buttons are still shown but do not navigate, so set both before publishing.
 
 ## Deploy to GitHub Pages
 
@@ -39,7 +39,7 @@ Once the final URL is known, change `og:image` in `index.html` to the full addre
 index.html              Page markup and copy
 assets/css/styles.css   Styles, including the light and dark colour tokens
 assets/js/config.js     Demo and purchase URLs
-assets/js/main.js       Theme switch, screen showcase, viewer, compare slider
+assets/js/main.js       Theme switch, screens, viewer, compare slider, purchase bar
 assets/img/screens/     Product screenshots (WebP)
 assets/img/og.jpg       Social preview image
 ```
