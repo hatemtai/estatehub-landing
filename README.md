@@ -64,6 +64,6 @@ To replace one, export the new image at the same size and file name. To add a sc
 
 "Watch the tour" in the hero opens `assets/video/estatehub-tour.mp4` in a dialog. The file is only downloaded when a visitor opens it.
 
-The video is built in the sibling `estatehub-video` folder. To change the narration or a scene, edit `script.json` there and run `npm run build`. To use a recorded voice, save one file per scene as `audio/<scene id>.wav` (`.mp3` and `.m4a` also work); the build uses a recording where one exists and the system voice otherwise, and retimes the scene to fit. `npm run voice` generates those files with ElevenLabs once `ELEVENLABS_API_KEY` is set in `estatehub-video/.env`.
+The video is built in the sibling `estatehub-video` folder. To change the narration or a scene, edit `script.json` there and run `npm run build`. To use a recorded voice, save one file per scene as `audio/<scene id>.wav` (`.mp3` and `.m4a` also work); the build uses a recording where one exists and the system voice otherwise, and retimes the scene to fit. The narration in the published video comes from Kokoro, an open-source voice model (Apache 2.0) that runs locally: `npm run speak` in `estatehub-video` regenerates `audio/<scene id>.wav` from `script.json`. `npm run voice` does the same with ElevenLabs once `ELEVENLABS_API_KEY` is set in `estatehub-video/.env`.
 
-The macOS system voice is a placeholder for timing only. Apple licenses it for personal use, so replace it before the video is published.
+Without those files the build falls back to the macOS system voice. Apple licenses that voice for personal use only, so do not publish a build that used it.
