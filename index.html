@@ -4,11 +4,11 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>EstateHub — Real estate marketplace built with Next.js 16</title>
-  <meta name="description" content="EstateHub is a complete real estate marketplace front end: public property site, customer account, seller portal and admin console in one Next.js 16 app.">
+  <meta name="description" content="EstateHub is a real estate marketplace front end for Next.js 16. Buyers search on a map and reserve, sellers list and get paid, and your team runs it all from one admin console.">
   <meta name="theme-color" content="#f5f5f2">
   <meta property="og:type" content="website">
   <meta property="og:title" content="EstateHub — Real estate marketplace built with Next.js 16">
-  <meta property="og:description" content="Public property site, customer account, seller portal and admin console in one Next.js 16 app.">
+  <meta property="og:description" content="Map search, deal tracking, verification and payouts for buyers, sellers and admins, in one Next.js 16 codebase.">
   <meta property="og:image" content="assets/img/og.jpg">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" href="favicon.ico" sizes="any">
@@ -26,7 +26,7 @@
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..700&family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
@@ -88,12 +88,12 @@
   <main id="main">
     <section class="hero">
       <div class="container">
-        <p class="hero-kind">Real estate marketplace for Next.js</p>
-        <h1>The whole property marketplace, <em>already built.</em></h1>
+        <p class="hero-kind">A real estate marketplace for Next.js 16</p>
+        <h1>The whole property marketplace<span class="tight">,</span> <em>already built<span class="tight">.</span></em></h1>
 
         <div class="hero-row">
           <div class="hero-pitch">
-            <p class="lead">EstateHub is the front end for a buy-and-rent property platform: the public site, the customer account, the seller portal and the admin console, in one codebase wired to a REST API.</p>
+            <p class="lead">Buyers search on a map and reserve a home. Sellers list property, take tour requests and get paid. Your staff approve listings, verify identities and close deals. EstateHub is all three sides in one Next.js codebase, connected to a REST API.</p>
             <div class="actions" id="hero-actions">
               <a class="btn btn-solid" data-link="purchase" target="_blank" rel="noopener">Buy on CodeCanyon</a>
               <a class="btn btn-line" data-link="demo" target="_blank" rel="noopener">Open the live demo <svg class="icon"><use href="#i-out"/></svg></a>
@@ -103,8 +103,8 @@
           <div class="hero-facts">
             <ul class="stats">
               <li><strong>73</strong><span>Pages</span></li>
-              <li><strong>4</strong><span>Product areas</span></li>
-              <li><strong>3</strong><span>Account roles</span></li>
+              <li><strong>4</strong><span>Areas</span></li>
+              <li><strong>3</strong><span>Roles</span></li>
               <li><strong>2</strong><span>Themes</span></li>
             </ul>
             <div class="builtwith">
@@ -147,8 +147,8 @@
     <section class="section" id="screens">
       <div class="container">
         <div class="section-head reveal">
-          <h2>Every screen, as it ships.</h2>
-          <p>Customers, sellers and administrators share one app, each with their own layout, navigation and route guard. These are captures of the real product running on demo data.</p>
+          <h2>Thirty-two screens<span class="tight">,</span> straight from the running app<span class="tight">.</span></h2>
+          <p>We signed in as a customer, a seller and an administrator and captured what was on screen, demo data and all. Pick an area, then step through it.</p>
         </div>
 
         <div class="showcase reveal">
@@ -162,58 +162,58 @@
           <div class="showcase-body">
             <div class="showcase-side">
               <div class="showcase-panel" role="tabpanel" id="panel-public" aria-labelledby="tab-public">
-                <p>Where visitors search, compare and reserve. A map-first property search, server-rendered listings and the purchase, lease and tour flows.</p>
+                <p>What a visitor sees before they have an account: search, listings, and the pages that turn interest into a reservation or a booked tour.</p>
                 <ol class="screen-list">
-                  <li><button type="button" class="screen-btn" data-shot="public-home" data-path="/" data-caption="Hero search with Buy, Lease and AI Search tabs, featured listings and a call to action for sellers.">Home</button></li>
-                  <li><button type="button" class="screen-btn" data-shot="public-listing-map" data-path="/listing" data-caption="Price pins on a live map, linked to the cards below. Clicking a pin docks a preview of the listing.">Map search</button></li>
-                  <li><button type="button" class="screen-btn" data-shot="public-listing-filters" data-path="/listing" data-caption="City and area, property type, price range, rooms and features. Every filter is stored in the URL.">Filters</button></li>
-                  <li><button type="button" class="screen-btn" data-shot="public-listing-grid" data-path="/listing?view=grid" data-caption="The same results as a card grid, with compare and save on every card.">Grid view</button></li>
-                  <li><button type="button" class="screen-btn" data-shot="public-detail" data-path="/listing/[slug]" data-caption="Server-rendered listing with pricing, amenities, location map, tour booking and reservation.">Property details</button></li>
-                  <li><button type="button" class="screen-btn" data-shot="public-become-seller" data-path="/become-a-seller" data-caption="Seller landing page that leads into the guided business verification wizard.">Become a seller</button></li>
-                  <li><button type="button" class="screen-btn" data-shot="public-login" data-path="/login" data-caption="Separate sign-in for customers, sellers and administrators, with Google and Facebook.">Sign in</button></li>
+                  <li><button type="button" class="screen-btn" data-shot="public-home" data-path="/" data-caption="The hero search has three tabs: Buy, Lease, and AI Search for people who would rather type a sentence.">Home</button></li>
+                  <li><button type="button" class="screen-btn" data-shot="public-listing-map" data-path="/listing" data-caption="Each pin is a price. Hover a card and its pin lights up. Click a pin and a preview docks at the bottom of the map.">Map search</button></li>
+                  <li><button type="button" class="screen-btn" data-shot="public-listing-filters" data-path="/listing" data-caption="City, then area, then type, price, rooms and features. Every choice is written to the URL, so a filtered search can be shared as a link.">Filters</button></li>
+                  <li><button type="button" class="screen-btn" data-shot="public-listing-grid" data-path="/listing?view=grid" data-caption="The same results without the map. Compare and save sit on every card.">Grid view</button></li>
+                  <li><button type="button" class="screen-btn" data-shot="public-detail" data-path="/listing/[slug]" data-caption="Rendered on the server, so the price and description are in the page before any script runs. Booking a tour or reserving is one click from here.">Property details</button></li>
+                  <li><button type="button" class="screen-btn" data-shot="public-become-seller" data-path="/become-a-seller" data-caption="The pitch to property owners, leading straight into the business verification wizard.">Become a seller</button></li>
+                  <li><button type="button" class="screen-btn" data-shot="public-login" data-path="/login" data-caption="Customers, sellers and administrators each have their own sign-in page. Google and Facebook are switched on from the admin console.">Sign in</button></li>
                 </ol>
               </div>
 
               <div class="showcase-panel" role="tabpanel" id="panel-customer" aria-labelledby="tab-customer" hidden>
-                <p>Everything a buyer or tenant needs after signing in: deals, favourites, comparisons, appointments and live chat with sellers.</p>
+                <p>Once someone signs in, this is where their deals, saved homes, tours and conversations live.</p>
                 <ol class="screen-list">
-                  <li><button type="button" class="screen-btn" data-shot="customer-deal-tracker" data-path="/dashboard/deals/[id]" data-caption="Each purchase or lease shown stage by stage, with the current checklist and the reservation payment.">Deal tracker</button></li>
-                  <li><button type="button" class="screen-btn" data-shot="customer-deals" data-path="/dashboard/deals" data-caption="All purchases and leases in one list, with stage progress, reservation status and price.">My deals</button></li>
-                  <li><button type="button" class="screen-btn" data-shot="customer-compare" data-path="/dashboard/compare" data-caption="Up to four properties side by side, with the best value highlighted and a differences-only switch.">Compare</button></li>
-                  <li><button type="button" class="screen-btn" data-shot="customer-favorites" data-path="/dashboard/favorites" data-caption="Saved listings organised into collections that can be shared.">Favourites</button></li>
-                  <li><button type="button" class="screen-btn" data-shot="customer-messages" data-path="/dashboard/messages" data-caption="Real-time chat with sellers: typing indicator, read receipts, image attachments and message templates.">Messages</button></li>
-                  <li><button type="button" class="screen-btn" data-shot="customer-appointments" data-path="/dashboard/appointments" data-caption="Upcoming, past and cancelled tours, with reschedule, cancel and add to calendar.">Appointments</button></li>
-                  <li><button type="button" class="screen-btn" data-shot="customer-tour" data-path="/listing/[slug]/tour" data-caption="Book an in-person or video tour from the seller's open time slots.">Tour booking</button></li>
-                  <li><button type="button" class="screen-btn" data-shot="customer-saved-searches" data-path="/dashboard/saved-searches" data-caption="Saved filters with alerts and one-click access to the latest matches.">Saved searches</button></li>
+                  <li><button type="button" class="screen-btn" data-shot="customer-deal-tracker" data-path="/dashboard/deals/[id]" data-caption="One deal, stage by stage. The buyer sees what has been done, what comes next and who is handling it.">Deal tracker</button></li>
+                  <li><button type="button" class="screen-btn" data-shot="customer-deals" data-path="/dashboard/deals" data-caption="Every purchase and lease the customer has started, with its stage, reservation status and price.">My deals</button></li>
+                  <li><button type="button" class="screen-btn" data-shot="customer-compare" data-path="/dashboard/compare" data-caption="Up to four homes side by side. The best figure in each row is highlighted, and one switch hides everything they have in common.">Compare</button></li>
+                  <li><button type="button" class="screen-btn" data-shot="customer-favorites" data-path="/dashboard/favorites" data-caption="Saved homes, grouped into collections such as a weekend shortlist.">Favourites</button></li>
+                  <li><button type="button" class="screen-btn" data-shot="customer-messages" data-path="/dashboard/messages" data-caption="Live chat with the seller. Typing indicators and read receipts behave the way people expect from a messaging app.">Messages</button></li>
+                  <li><button type="button" class="screen-btn" data-shot="customer-appointments" data-path="/dashboard/appointments" data-caption="Booked tours, with the next visit pinned on top. Reschedule, cancel, or download a calendar file.">Appointments</button></li>
+                  <li><button type="button" class="screen-btn" data-shot="customer-tour" data-path="/listing/[slug]/tour" data-caption="In person or by video call. Only the slots the seller has open are offered.">Tour booking</button></li>
+                  <li><button type="button" class="screen-btn" data-shot="customer-saved-searches" data-path="/dashboard/saved-searches" data-caption="A search worth repeating, saved with an alert switch and a shortcut to its latest matches.">Saved searches</button></li>
                 </ol>
               </div>
 
               <div class="showcase-panel" role="tabpanel" id="panel-seller" aria-labelledby="tab-seller" data-themed hidden>
-                <p>A workspace for owners and landlords: listings, tour requests, conversations and payouts. Ships in light and dark.</p>
+                <p>The workspace for owners and landlords. Listings go in, tour requests and messages come back, and earnings are paid out. Light and dark.</p>
                 <ol class="screen-list">
-                  <li><button type="button" class="screen-btn" data-shot="seller-dashboard" data-path="/seller/dashboard" data-caption="Listings, leads, visits and earnings at a glance, with revenue by period and today's priorities.">Dashboard</button></li>
-                  <li><button type="button" class="screen-btn" data-shot="seller-properties" data-path="/seller/properties" data-caption="Every sale and rental listing with its status, price and quick actions.">My properties</button></li>
-                  <li><button type="button" class="screen-btn" data-shot="seller-create" data-path="/seller/properties/create" data-caption="Guided listing editor with a checklist, drafts and submit for review.">Add a property</button></li>
-                  <li><button type="button" class="screen-btn" data-shot="seller-appointments" data-path="/seller/appointments" data-caption="Tour requests in a table and a month calendar, filtered by status.">Appointments</button></li>
-                  <li><button type="button" class="screen-btn" data-shot="seller-messages" data-path="/seller/messages" data-caption="Conversations with buyers, with the related listing, templates and quick actions alongside.">Messages</button></li>
-                  <li><button type="button" class="screen-btn" data-shot="seller-finance" data-path="/seller/finance" data-caption="Available balance, earnings after platform fees and payout requests.">Finance and earnings</button></li>
+                  <li><button type="button" class="screen-btn" data-shot="seller-dashboard" data-path="/seller/dashboard" data-caption="Listings, leads, upcoming visits and earnings, with revenue for whichever period you choose.">Dashboard</button></li>
+                  <li><button type="button" class="screen-btn" data-shot="seller-properties" data-path="/seller/properties" data-caption="Sale and rental listings in one table, with status, price and the date each was last updated.">My properties</button></li>
+                  <li><button type="button" class="screen-btn" data-shot="seller-create" data-path="/seller/properties/create" data-caption="A listing form with a checklist beside it. Save a draft, or submit for review once the required parts are done.">Add a property</button></li>
+                  <li><button type="button" class="screen-btn" data-shot="seller-appointments" data-path="/seller/appointments" data-caption="Tour requests as a table and as a month calendar, filtered by status.">Appointments</button></li>
+                  <li><button type="button" class="screen-btn" data-shot="seller-messages" data-path="/seller/messages" data-caption="Buyer conversations with the listing in question shown alongside, plus reply templates.">Messages</button></li>
+                  <li><button type="button" class="screen-btn" data-shot="seller-finance" data-path="/seller/finance" data-caption="What each property earned after the platform fee, the balance ready to withdraw, and a button to request the payout.">Finance and earnings</button></li>
                 </ol>
               </div>
 
               <div class="showcase-panel" role="tabpanel" id="panel-admin" aria-labelledby="tab-admin" data-themed hidden>
-                <p>The whole marketplace run from one console: moderation, verification, deals, finance and platform settings. Ships in light and dark.</p>
+                <p>Where your team runs the platform: approving listings, checking identities, moving deals forward and reconciling payments. Light and dark.</p>
                 <ol class="screen-list">
-                  <li><button type="button" class="screen-btn" data-shot="admin-dashboard" data-path="/admin/dashboard" data-caption="Platform totals, revenue by period, a marketplace breakdown and the approval queues.">Dashboard</button></li>
-                  <li><button type="button" class="screen-btn" data-shot="admin-properties" data-path="/admin/properties" data-caption="Review queue with moderation, plus flagged and featured listings.">Properties</button></li>
-                  <li><button type="button" class="screen-btn" data-shot="admin-bulk" data-path="/admin/properties/bulk" data-caption="Approve, reject, hide, feature or delete up to 100 listings in one batch.">Bulk actions</button></li>
-                  <li><button type="button" class="screen-btn" data-shot="admin-deals" data-path="/admin/deals" data-caption="Every purchase and lease, from reservation to handover.">Deals</button></li>
-                  <li><button type="button" class="screen-btn" data-shot="admin-deal-detail" data-path="/admin/deals/[type]/[id]" data-caption="Per-transaction checklist with stage completion, required attachments and buyer contact.">Deal checklist</button></li>
-                  <li><button type="button" class="screen-btn" data-shot="admin-verifications" data-path="/admin/verifications" data-caption="Customer identity (KYC) and seller business (KYB) verification in one review queue.">KYC and KYB</button></li>
-                  <li><button type="button" class="screen-btn" data-shot="admin-payments" data-path="/admin/finance/payments" data-caption="Verify bank-transfer payments, add manual entries and export to CSV.">Payments</button></li>
-                  <li><button type="button" class="screen-btn" data-shot="admin-users" data-path="/admin/users" data-caption="Buyers, owners and staff, with verification and account status.">Users and roles</button></li>
-                  <li><button type="button" class="screen-btn" data-shot="admin-integrations" data-path="/admin/settings/integrations" data-caption="AI search, bank transfer, storage, email and social sign-in, configured without touching code.">Integrations</button></li>
-                  <li><button type="button" class="screen-btn" data-shot="admin-checklists" data-path="/admin/settings/checklists" data-caption="Edit the steps each purchase and lease goes through, stage by stage.">Checklist templates</button></li>
-                  <li><button type="button" class="screen-btn" data-shot="admin-branding" data-path="/admin/settings" data-caption="Platform name, logo, favicon and brand colours, applied across the site and both portals.">Branding</button></li>
+                  <li><button type="button" class="screen-btn" data-shot="admin-dashboard" data-path="/admin/dashboard" data-caption="Platform totals, revenue for a chosen period, where every listing currently sits, and the queues waiting for approval.">Dashboard</button></li>
+                  <li><button type="button" class="screen-btn" data-shot="admin-properties" data-path="/admin/properties" data-caption="The moderation queue. Approve, hide or feature a listing, and see which ones have verified ownership documents.">Properties</button></li>
+                  <li><button type="button" class="screen-btn" data-shot="admin-bulk" data-path="/admin/properties/bulk" data-caption="Pick one action, select up to 100 listings, confirm. Each listing reports its own result.">Bulk actions</button></li>
+                  <li><button type="button" class="screen-btn" data-shot="admin-deals" data-path="/admin/deals" data-caption="Every purchase and lease in progress, with its stage and how much of the checklist is done.">Deals</button></li>
+                  <li><button type="button" class="screen-btn" data-shot="admin-deal-detail" data-path="/admin/deals/[type]/[id]" data-caption="The working view of one deal. Tick items off, attach what is required, then complete the stage.">Deal checklist</button></li>
+                  <li><button type="button" class="screen-btn" data-shot="admin-verifications" data-path="/admin/verifications" data-caption="Identity checks for customers and business checks for sellers, reviewed from the same queue.">KYC and KYB</button></li>
+                  <li><button type="button" class="screen-btn" data-shot="admin-payments" data-path="/admin/finance/payments" data-caption="Bank-transfer payments waiting to be verified. Add one by hand, or export the list to CSV.">Payments</button></li>
+                  <li><button type="button" class="screen-btn" data-shot="admin-users" data-path="/admin/users" data-caption="Everyone on the platform, filtered by role, verification and account status.">Users and roles</button></li>
+                  <li><button type="button" class="screen-btn" data-shot="admin-integrations" data-path="/admin/settings/integrations" data-caption="AI search, bank transfer, storage, email and social sign-in. Keys are saved here and never shown again.">Integrations</button></li>
+                  <li><button type="button" class="screen-btn" data-shot="admin-checklists" data-path="/admin/settings/checklists" data-caption="The steps a purchase or lease goes through. Reorder them, switch one off, or add your own.">Checklist templates</button></li>
+                  <li><button type="button" class="screen-btn" data-shot="admin-branding" data-path="/admin/settings" data-caption="Name, logo, favicon and three brand colours, with a preview before you save.">Branding</button></li>
                 </ol>
               </div>
             </div>
@@ -233,7 +233,7 @@
                     <button class="icon-btn" type="button" id="showcase-enlarge" aria-label="Enlarge screenshot"><svg class="icon"><use href="#i-expand"/></svg></button>
                   </div>
                 </div>
-                <p id="showcase-caption">Hero search with Buy, Lease and AI Search tabs, featured listings and a call to action for sellers.</p>
+                <p id="showcase-caption">The hero search has three tabs: Buy, Lease, and AI Search for people who would rather type a sentence.</p>
               </figcaption>
             </figure>
           </div>
@@ -244,19 +244,20 @@
     <section class="section" id="features">
       <div class="container">
         <div class="section-head reveal">
-          <h2>The parts that take months.</h2>
-          <p>Search, deals, verification and money are the slow features of any marketplace. Here they are built, connected to the API and documented.</p>
+          <h2>The parts that take months<span class="tight">.</span></h2>
+          <p>Any developer can build a grid of listings. What slows a marketplace down is search that feels instant, deals that run for weeks, proving who people are, and moving money. Those four are finished here.</p>
         </div>
 
         <ol class="features">
           <li class="feature reveal">
             <div class="feature-copy">
-              <h3>Map-first search that keeps its state in the URL</h3>
-              <p>Buyers browse price pins on a live map, narrow down with a filter panel, or describe what they want in a sentence. Every search can be bookmarked, shared or restored with the back button.</p>
+              <h3>Search that lives in the address bar</h3>
+              <p>Buyers move around a map of price pins, open a filter panel, or type what they want in plain words. Whatever they do is written to the URL, so the back button works and a search can be sent to a partner as a link.</p>
               <ul class="facts">
-                <li>Leaflet with OpenStreetMap tiles, so no map API key</li>
-                <li>Radius search from a dropped pin or the visitor's location</li>
-                <li>AI search turns a sentence into ordinary filters</li>
+                <li>Leaflet on OpenStreetMap tiles. No map key, no map bill.</li>
+                <li>Radius search from a dropped pin or the visitor's own location, up to 50 km</li>
+                <li>Results refresh 400 ms after the typing stops</li>
+                <li>AI search shows what it understood and what it could not apply</li>
               </ul>
             </div>
             <button class="zoom feature-media" type="button" data-zoom="public-listing-filters" data-title="Map search with filters" aria-label="Enlarge screenshot">
@@ -267,12 +268,12 @@
 
           <li class="feature reveal">
             <div class="feature-copy">
-              <h3>Deals tracked from reservation to handover</h3>
-              <p>A buyer reserves a property, uploads payment proof and follows the deal stage by stage. Administrators work through a checklist for each transaction and complete each stage.</p>
+              <h3>A sale that takes weeks, tracked in one place</h3>
+              <p>A buyer reserves, sends proof of payment, then waits while documents are checked and ownership changes hands. Each stage has its own checklist. The buyer sees where things stand, and your team ticks items off from the admin console.</p>
               <ul class="facts">
-                <li>Purchase and lease flows with their own stages</li>
-                <li>Stages and checklist items come from the server</li>
-                <li>Checklist templates are editable in admin settings</li>
+                <li>Separate flows for buying and for leasing</li>
+                <li>Stages and steps come from the server, so you can change them without a release</li>
+                <li>A blocked step carries a note explaining why</li>
               </ul>
             </div>
             <button class="zoom feature-media" type="button" data-zoom="customer-deal-tracker" data-title="Deal tracker" aria-label="Enlarge screenshot">
@@ -283,11 +284,11 @@
 
           <li class="feature reveal">
             <div class="feature-copy">
-              <h3>Identity and business verification</h3>
-              <p>Customers complete a six-step identity check. Sellers apply through a guided business verification wizard. Administrators review both from a single queue.</p>
+              <h3>Know who you are dealing with</h3>
+              <p>Customers verify their identity in six steps: personal details, address, an ID document, a selfie, declarations and a final review. Sellers apply with their business details. Both land in one queue for your team.</p>
               <ul class="facts">
-                <li>Document and selfie upload with previews</li>
-                <li>Status shown on the profile and the seller application</li>
+                <li>Email and phone are verified alongside the documents</li>
+                <li>Every request shows where it stands: pending, under review, approved or rejected</li>
               </ul>
             </div>
             <button class="zoom feature-media" type="button" data-zoom="admin-verifications" data-themed data-title="KYC and KYB verification" aria-label="Enlarge screenshot">
@@ -297,10 +298,10 @@
 
           <li class="feature reveal">
             <div class="feature-copy">
-              <h3>Finance for both sides of the deal</h3>
-              <p>Sellers see what each property earns after platform fees and request payouts. Administrators verify payments, record manual ones and transfer approved payouts in batches.</p>
+              <h3>Money, seen from both sides</h3>
+              <p>A seller sees what each property earned, what the platform kept and what is ready to withdraw. On your side, staff verify incoming bank transfers, record payments made in person, and send approved payouts as a batch.</p>
               <ul class="facts">
-                <li>Commission and reservation rules set in admin</li>
+                <li>Commission and reservation rules are set once, in admin</li>
                 <li>Payments export to CSV</li>
               </ul>
             </div>
@@ -311,11 +312,12 @@
 
           <li class="feature reveal">
             <div class="feature-copy">
-              <h3>Real-time messaging and notifications</h3>
-              <p>Buyers and sellers chat over WebSockets, with typing indicators, read receipts and image attachments. A floating chat dock follows the visitor from page to page.</p>
+              <h3>Messaging that behaves like a messaging app</h3>
+              <p>Buyers and sellers talk over WebSockets, so messages, typing indicators and read receipts arrive as they happen. Start a conversation from a listing and it follows you around the site in a small dock while you keep browsing.</p>
               <ul class="facts">
-                <li>Notification centre for all three audiences</li>
-                <li>Per-category notification preferences</li>
+                <li>Image attachments and reply templates</li>
+                <li>A notification centre for customers, sellers and admins</li>
+                <li>Customers choose which notifications they receive</li>
               </ul>
             </div>
             <button class="zoom feature-media" type="button" data-zoom="seller-messages" data-themed data-title="Messages" aria-label="Enlarge screenshot">
@@ -325,11 +327,11 @@
 
           <li class="feature reveal">
             <div class="feature-copy">
-              <h3>Rebrand it without a rebuild</h3>
-              <p>The platform name, logo and brand colours load from the API. Change them in the admin console and the public site and both portals follow.</p>
+              <h3>Rebrand it from the admin console</h3>
+              <p>The platform name, logo, favicon and brand colours are settings, loaded from the API at runtime. Change them, save, and the public site and both portals pick them up. Nobody has to open the code or redeploy.</p>
               <ul class="facts">
-                <li>Storage, email, bank transfer and social sign-in set up in admin</li>
-                <li>Saved secrets are write-only</li>
+                <li>Storage, email, bank details and social sign-in are set up the same way</li>
+                <li>Saved keys are write-only. The console shows that one is set, never what it is.</li>
               </ul>
             </div>
             <button class="zoom feature-media" type="button" data-zoom="admin-branding" data-themed data-title="Branding settings" aria-label="Enlarge screenshot">
@@ -339,14 +341,14 @@
         </ol>
 
         <dl class="also reveal">
-          <div><dt>SEO</dt><dd>Dynamic metadata, canonical URLs, Open Graph tags, sitemap, robots and listing structured data.</dd></div>
-          <div><dt>AI search</dt><dd>OpenAI, Anthropic or Gemini, chosen and switched on from the admin console.</dd></div>
-          <div><dt>Social sign-in</dt><dd>Google and Facebook, enabled and configured without code changes.</dd></div>
-          <div><dt>Tour booking</dt><dd>In-person or video tours booked from the seller's available time slots.</dd></div>
-          <div><dt>Saved searches</dt><dd>Saved from the listing page, with alerts and one-click restore.</dd></div>
-          <div><dt>Reviews</dt><dd>Customers rate completed deals. Administrators hide or delete reviews.</dd></div>
-          <div><dt>Announcements</dt><dd>Platform-wide messages with per-channel delivery.</dd></div>
-          <div><dt>Sessions</dt><dd>Silent token refresh, an active sessions list and sign out everywhere.</dd></div>
+          <div><dt>SEO</dt><dd>Per-listing titles and descriptions, canonical URLs, Open Graph tags, a sitemap, robots.txt and RealEstateListing structured data.</dd></div>
+          <div><dt>AI search</dt><dd>Runs on OpenAI, Anthropic or Gemini. An admin picks the provider and model, or leaves it off.</dd></div>
+          <div><dt>Social sign-in</dt><dd>Google and Facebook. Add the credentials in the admin console and the buttons appear.</dd></div>
+          <div><dt>Tour booking</dt><dd>In person or by video, from the time slots the seller has open.</dd></div>
+          <div><dt>Saved searches</dt><dd>Saved from the results page, with alerts and a link back to the latest matches.</dd></div>
+          <div><dt>Reviews</dt><dd>Buyers and tenants rate a deal once it completes. Admins can hide or delete a review.</dd></div>
+          <div><dt>Announcements</dt><dd>A message to everyone on the platform or to one audience, delivered per channel.</dd></div>
+          <div><dt>Sessions</dt><dd>Tokens refresh silently. Users can see every signed-in device and sign any of them out.</dd></div>
         </dl>
       </div>
     </section>
@@ -354,8 +356,8 @@
     <section class="section" id="themes">
       <div class="container">
         <div class="section-head reveal">
-          <h2>Light and dark, from one set of tokens.</h2>
-          <p>The seller portal and admin console ship in both themes. The saved choice is applied before first paint, so there is no flash on load. Drag the handle to compare.</p>
+          <h2>Light and dark<span class="tight">,</span> from one set of tokens<span class="tight">.</span></h2>
+          <p>Both portals are built from colour tokens, so dark mode is the same layout with a different palette. The choice is saved and applied before the first paint, which is why there is no white flash on load. Drag the handle.</p>
         </div>
 
         <div class="compare reveal" id="compare" style="--pos: 50%">
@@ -376,8 +378,8 @@
     <section class="section" id="responsive">
       <div class="container">
         <div class="section-head reveal">
-          <h2>Designed for the phone first.</h2>
-          <p>Tables switch to cards on small screens, filters move into a sheet and portal navigation collapses into a drawer.</p>
+          <h2>Designed for the phone first<span class="tight">.</span></h2>
+          <p>People look for homes on their phones, so that is where each layout started. Tables become cards, the filter panel becomes a sheet, and the portal sidebar folds into a drawer.</p>
         </div>
 
         <ul class="phones reveal">
@@ -393,8 +395,8 @@
     <section class="section" id="stack">
       <div class="container">
         <div class="section-head reveal">
-          <h2>A stack your team already knows.</h2>
-          <p>Current versions, strict TypeScript and a domain-based folder structure that stays readable as the product grows.</p>
+          <h2>A stack your team already knows<span class="tight">.</span></h2>
+          <p>Nothing exotic and nothing abandoned. These are the libraries and major versions in the project, each doing one job.</p>
         </div>
 
         <div class="stack reveal">
@@ -402,22 +404,22 @@
             <li>
               <div class="tech-top"><svg class="logo"><use href="#t-next"/></svg><span>16</span></div>
               <h3>Next.js</h3>
-              <p>App Router and React Server Components</p>
+              <p>App Router with React Server Components</p>
             </li>
             <li>
               <div class="tech-top"><svg class="logo"><use href="#t-react"/></svg><span>19</span></div>
               <h3>React</h3>
-              <p>The UI runtime, with server and client components</p>
+              <p>Server and client components</p>
             </li>
             <li>
               <div class="tech-top"><svg class="logo"><use href="#t-ts"/></svg><span>5</span></div>
               <h3>TypeScript</h3>
-              <p>Strict mode across the whole codebase</p>
+              <p>Strict mode, across the whole codebase</p>
             </li>
             <li>
               <div class="tech-top"><svg class="logo"><use href="#t-tailwind"/></svg><span>4</span></div>
               <h3>Tailwind CSS</h3>
-              <p>Design tokens kept in one stylesheet</p>
+              <p>Every colour and radius is a token</p>
             </li>
             <li>
               <div class="tech-top"><svg class="logo"><use href="#t-shadcn"/></svg></div>
@@ -427,17 +429,17 @@
             <li>
               <div class="tech-top"><svg class="logo"><use href="#t-redux"/></svg><span>2</span></div>
               <h3>Redux Toolkit</h3>
-              <p>RTK Query for server state and caching</p>
+              <p>RTK Query handles server state and caching</p>
             </li>
             <li>
               <div class="tech-top"><svg class="logo"><use href="#t-rhf"/></svg><span>7</span></div>
               <h3>React Hook Form</h3>
-              <p>Fast forms with field-level validation</p>
+              <p>Forms that validate field by field</p>
             </li>
             <li>
               <div class="tech-top"><svg class="logo"><use href="#t-zod"/></svg><span>4</span></div>
               <h3>Zod</h3>
-              <p>Schemas for every form and wizard step</p>
+              <p>A schema behind every form and wizard step</p>
             </li>
             <li>
               <div class="tech-top"><svg class="logo"><use href="#t-leaflet"/></svg><span>1.9</span></div>
@@ -447,15 +449,15 @@
             <li>
               <div class="tech-top"><svg class="logo"><use href="#t-charts"/></svg><span>3</span></div>
               <h3>Recharts</h3>
-              <p>Revenue and marketplace charts</p>
+              <p>The revenue and marketplace charts</p>
             </li>
           </ul>
 
           <dl class="notes">
-            <div><dt>One app, three audiences</dt><dd>Each portal has its own layout, navigation and route guard, built on a shared portal shell.</dd></div>
-            <div><dt>Server-rendered where it matters</dt><dd>Property pages resolve on the server for a fast first paint and complete metadata.</dd></div>
-            <div><dt>One API layer</dt><dd>RTK Query attaches the access token and refreshes it once on a 401. Concurrent requests share one refresh.</dd></div>
-            <div><dt>Documented design system</dt><dd>Colour tokens, type scale, spacing, radii and every reusable component are written down in the docs folder.</dd></div>
+            <div><dt>One app, three audiences</dt><dd>Customers, sellers and admins each get their own layout, navigation and route guard. They share one portal shell, so a fix made once reaches all three.</dd></div>
+            <div><dt>Server-rendered where it counts</dt><dd>Listing pages are resolved on the server, with metadata and structured data in the first response. Search and the portals run on the client.</dd></div>
+            <div><dt>One API layer</dt><dd>Every request goes through one RTK Query base. It attaches the token, and when several calls hit a 401 at once they wait on a single refresh.</dd></div>
+            <div><dt>Written down</dt><dd>The design system and a component inventory are in the docs folder: every token, type size, spacing rule and reusable component.</dd></div>
           </dl>
         </div>
       </div>
@@ -464,38 +466,42 @@
     <section class="section" id="faq">
       <div class="container">
         <div class="section-head reveal">
-          <h2>Before you buy.</h2>
-          <p>The practical details of running and customising EstateHub.</p>
+          <h2>Before you buy<span class="tight">.</span></h2>
+          <p>Short answers to the practical questions.</p>
         </div>
 
         <div class="faq-list reveal">
           <details>
             <summary>What do I need to run it?<svg class="icon"><use href="#i-plus"/></svg></summary>
-            <p>Node.js 20.9 or newer, pnpm, and the URL of an EstateHub REST API. Copy the example environment file, set the API URL, then run the install and dev commands. The API URL is the only required variable.</p>
+            <p>Node.js 20.9 or newer and pnpm. Copy the example environment file, point it at your EstateHub API, and run the dev command. That API URL is the only setting it cannot start without.</p>
           </details>
           <details>
-            <summary>Where can I deploy it?<svg class="icon"><use href="#i-plus"/></svg></summary>
-            <p>Anywhere Next.js runs. Import the repository into Vercel or a similar platform, or build it and serve it from your own Node server behind a reverse proxy such as Nginx or Caddy.</p>
+            <summary>Where can I host it?<svg class="icon"><use href="#i-plus"/></svg></summary>
+            <p>Anywhere that runs Next.js. Vercel is the shortest path. On your own server, build it, start it, and put Nginx or Caddy in front for TLS.</p>
           </details>
           <details>
-            <summary>Can I rebrand it without editing code?<svg class="icon"><use href="#i-plus"/></svg></summary>
-            <p>Yes. The platform name, logo, favicon and brand colours are set in the admin console and load from the API, so a rebrand needs no rebuild. For deeper changes, the design tokens live in one stylesheet.</p>
+            <summary>How do buyers pay?<svg class="icon"><use href="#i-plus"/></svg></summary>
+            <p>By bank transfer. The buyer uploads proof of payment and your team verifies it in the admin console. Payments made in person can be recorded by an admin. There is no card gateway built in.</p>
           </details>
           <details>
-            <summary>Do the maps need a paid API key?<svg class="icon"><use href="#i-plus"/></svg></summary>
-            <p>No. The listing map uses Leaflet with OpenStreetMap tiles, which need no key.</p>
+            <summary>Can I rebrand it without touching code?<svg class="icon"><use href="#i-plus"/></svg></summary>
+            <p>Yes, for the name, logo, favicon and brand colours. They are settings in the admin console. To go further, the colour, radius and spacing tokens are in a single stylesheet.</p>
           </details>
           <details>
-            <summary>Is dark mode available everywhere?<svg class="icon"><use href="#i-plus"/></svg></summary>
-            <p>The seller portal and admin console switch between light and dark. The public site and customer account are light, and the design system documentation lists the steps to opt them in.</p>
+            <summary>Do the maps cost anything?<svg class="icon"><use href="#i-plus"/></svg></summary>
+            <p>No. The map is Leaflet on OpenStreetMap tiles, which need no key and no billing account.</p>
           </details>
           <details>
-            <summary>How are social sign-in, storage and email configured?<svg class="icon"><use href="#i-plus"/></svg></summary>
-            <p>From the admin console under Settings, Integrations. Credentials are not environment variables, and saved secrets are write-only: the console shows whether a value is set, never the value itself.</p>
+            <summary>Is dark mode everywhere?<svg class="icon"><use href="#i-plus"/></svg></summary>
+            <p>In the seller portal and the admin console, yes. The public site and the customer account are light only. The design system document lists the steps to switch them on if you want it.</p>
           </details>
           <details>
-            <summary>Which AI providers does AI search support?<svg class="icon"><use href="#i-plus"/></svg></summary>
-            <p>OpenAI, Anthropic and Gemini. An administrator picks the provider and model and switches the feature on. When it is off, the ordinary search and filters work as usual.</p>
+            <summary>Where do API keys and credentials go?<svg class="icon"><use href="#i-plus"/></svg></summary>
+            <p>Into the admin console, under Settings, then Integrations. That covers social sign-in, storage, email, bank transfer details and the AI provider. A saved key is never sent back to the browser.</p>
+          </details>
+          <details>
+            <summary>Which AI providers work with AI search?<svg class="icon"><use href="#i-plus"/></svg></summary>
+            <p>OpenAI, Anthropic and Gemini. Pick one, enter a model and a key, and switch it on. With it off, the normal search and filters are unaffected.</p>
           </details>
         </div>
       </div>
@@ -503,9 +509,9 @@
 
     <section class="closing">
       <div class="container closing-inner">
-        <h2>Start with it<br>already built.</h2>
+        <h2>Start with it<br>already built<span class="tight">.</span></h2>
         <div class="closing-side">
-          <p>See it running in the live demo, then make it yours.</p>
+          <p>Open the demo and try to break it. If it does what your marketplace needs, the code is one purchase away.</p>
           <div class="actions">
             <a class="btn btn-invert" data-link="purchase" target="_blank" rel="noopener">Buy on CodeCanyon</a>
             <a class="btn btn-invert-line" data-link="demo" target="_blank" rel="noopener">Open the live demo <svg class="icon"><use href="#i-out"/></svg></a>
