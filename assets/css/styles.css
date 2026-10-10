@@ -307,7 +307,7 @@ pre {
 
 .site-nav {
   display: flex;
-  gap: 28px;
+  gap: clamp(16px, 2vw, 28px);
   margin-right: auto;
 }
 
@@ -345,7 +345,7 @@ pre {
 /* Hero */
 
 .hero {
-  padding: clamp(36px, 6vw, 80px) 0 clamp(8px, 2vw, 24px);
+  padding: clamp(28px, 4.2vw, 56px) 0 clamp(8px, 2vw, 24px);
 }
 
 .hero-kind {
@@ -365,12 +365,11 @@ pre {
 }
 
 .hero h1 {
-  max-width: 11.4em;
   text-wrap: wrap;
-  margin-top: clamp(18px, 2.4vw, 28px);
-  font-size: clamp(2.5rem, 7.6vw, 6.25rem);
+  margin-top: clamp(14px, 1.8vw, 22px);
+  font-size: clamp(2.375rem, 5vw, 4.5rem);
   font-weight: 800;
-  line-height: 1.02;
+  line-height: 1.04;
   letter-spacing: -0.045em;
 }
 
@@ -389,8 +388,8 @@ pre {
   grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
   gap: clamp(32px, 6vw, 96px);
   align-items: start;
-  margin-top: clamp(36px, 5vw, 64px);
-  padding-top: 28px;
+  margin-top: clamp(24px, 3vw, 36px);
+  padding-top: 24px;
   border-top: 1px solid var(--line-strong);
 }
 
@@ -402,7 +401,13 @@ pre {
 }
 
 .hero-pitch .actions {
-  margin-top: 32px;
+  margin-top: 24px;
+}
+
+.hero-for {
+  margin-top: 14px;
+  color: var(--muted);
+  font-size: 14px;
 }
 
 .stats {
@@ -475,7 +480,7 @@ pre {
 
 .hero-stage {
   position: relative;
-  margin-top: clamp(48px, 7vw, 104px);
+  margin-top: clamp(36px, 4vw, 56px);
   padding-bottom: 12%;
 }
 
@@ -561,6 +566,29 @@ pre {
 .section-head p {
   max-width: 46ch;
   font-size: 1.0625rem;
+}
+
+/* At a glance */
+
+.glance {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(24px, 4vw, 56px);
+}
+
+.glance h3 {
+  padding-bottom: 14px;
+  font-size: 1.25rem;
+  letter-spacing: -0.03em;
+}
+
+.glance .facts {
+  margin-top: 0;
+  font-size: 15px;
+}
+
+.glance .facts li {
+  padding: 11px 0;
 }
 
 /* Screens */
@@ -1219,7 +1247,8 @@ pre {
   .hero-row,
   .section-head,
   .showcase-body,
-  .closing-inner {
+  .closing-inner,
+  .glance {
     grid-template-columns: minmax(0, 1fr);
   }
 
@@ -1353,7 +1382,16 @@ pre {
     width: 100%;
   }
 
+  .builtwith {
+    display: none;
+  }
+
+  .hero-row {
+    gap: 22px;
+  }
+
   .hero-stage {
+    margin-top: 28px;
     padding-bottom: 16%;
   }
 
