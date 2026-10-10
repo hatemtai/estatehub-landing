@@ -42,6 +42,7 @@ assets/js/config.js     Demo and purchase URLs
 assets/js/main.js       Theme switch, screens, viewer, compare slider, purchase bar
 assets/img/screens/     Product screenshots (WebP)
 assets/img/og.jpg       Social preview image
+assets/video/           Product tour (MP4), its poster frame and captions
 ```
 
 ## Screenshots
@@ -58,3 +59,9 @@ To replace one, export the new image at the same size and file name. To add a sc
 ```
 
 `data-shot` is the file name without the theme and width. Panels marked `data-themed` expect both a light and a dark file.
+
+## Product tour video
+
+"Watch the 80-second tour" in the hero opens `assets/video/estatehub-tour.mp4` in a dialog. The file is only downloaded when a visitor opens it.
+
+The video is built in the sibling `estatehub-video` folder. To change the narration or a scene, edit `script.json` there and run `npm run build`. To use a recorded voice, save one WAV per scene as `audio/<scene id>.wav`; the build uses a recording where one exists and the system voice otherwise, and retimes the scene to fit.
