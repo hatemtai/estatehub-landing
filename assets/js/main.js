@@ -294,7 +294,7 @@
 
   var tour = $("#tour");
   var tourVideo = $("#tour-video");
-  var tourPreview = $(".tour-thumb video");
+  var tourPreview = $(".tour-card video");
   var reducedMotion = window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches;
 
   function playPreview() {

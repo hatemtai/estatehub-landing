@@ -243,50 +243,41 @@ pre {
   transform: translateX(3px);
 }
 
-.tour-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 14px;
-  padding: 0;
-  border: 0;
-  background: none;
-  color: var(--ink);
-  text-align: left;
-}
-
-.tour-thumb {
+.tour-card {
   position: relative;
-  flex: none;
-  width: 152px;
+  display: block;
+  width: 100%;
   aspect-ratio: 16 / 9;
+  padding: 0;
   overflow: hidden;
-  border-radius: 10px;
+  border: 1px solid var(--line);
+  border-radius: 16px;
   background: var(--surface-2);
-  box-shadow: 0 0 0 1px var(--line), 0 14px 30px -18px rgb(17 19 28 / 45%);
+  box-shadow: var(--shot-shadow);
 }
 
-.tour-thumb video {
+.tour-card video {
   display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+  transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-.tour-thumb::after {
+.tour-card::after {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgb(17 19 28 / 14%);
+  background: rgb(11 12 16 / 10%);
   transition: background-color 0.2s;
 }
 
-.tour-link:hover .tour-thumb video {
-  transform: scale(1.05);
+.tour-card:hover video {
+  transform: scale(1.04);
 }
 
-.tour-link:hover .tour-thumb::after {
-  background: rgb(17 19 28 / 4%);
+.tour-card:hover::after {
+  background: rgb(11 12 16 / 0%);
 }
 
 .tour-play {
@@ -296,46 +287,25 @@ pre {
   z-index: 1;
   display: grid;
   place-items: center;
-  width: 38px;
-  height: 38px;
-  margin: -19px 0 0 -19px;
+  width: 68px;
+  height: 68px;
+  margin: -34px 0 0 -34px;
   border-radius: 50%;
   background: var(--accent);
-  box-shadow: 0 0 0 4px rgb(255 255 255 / 55%), 0 6px 16px rgb(17 19 28 / 30%);
-  transition: transform 0.16s;
+  box-shadow: 0 0 0 8px rgb(255 255 255 / 45%), 0 12px 30px rgb(11 12 16 / 30%);
+  transition: transform 0.2s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-.tour-link:hover .tour-play {
-  transform: scale(1.12);
+.tour-card:hover .tour-play {
+  transform: scale(1.08);
 }
 
 .tour-play .icon {
-  width: 15px;
-  height: 15px;
-  margin-left: 1px;
+  width: 24px;
+  height: 24px;
+  margin-left: 3px;
   fill: #ffffff;
   stroke: none;
-}
-
-.tour-text {
-  display: grid;
-  gap: 6px;
-  font-size: 16px;
-  font-weight: 600;
-  line-height: 1.15;
-}
-
-.tour-link:hover .tour-text {
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-  text-underline-offset: 4px;
-}
-
-.tour-text small {
-  color: var(--muted);
-  font-family: var(--mono);
-  font-size: 12.5px;
-  font-weight: 400;
 }
 
 .btn-invert {
@@ -498,7 +468,11 @@ pre {
 }
 
 .hero-body {
-  margin-top: clamp(20px, 2.4vw, 30px);
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: clamp(32px, 5vw, 80px);
+  align-items: center;
+  margin-top: clamp(24px, 3vw, 36px);
 }
 
 .lead {
@@ -513,7 +487,7 @@ pre {
   flex-wrap: wrap;
   align-items: center;
   gap: 10px 18px;
-  margin-top: clamp(32px, 4vw, 48px);
+  margin-top: clamp(28px, 3vw, 40px);
   padding-top: 20px;
   border-top: 1px solid var(--line);
   color: var(--muted);
@@ -557,13 +531,6 @@ pre {
   background: var(--surface);
 }
 
-.hero-cta-sep {
-  width: 1px;
-  height: 36px;
-  margin: 0 12px;
-  background: var(--line-strong);
-}
-
 .logo {
   width: 18px;
   height: 18px;
@@ -573,7 +540,7 @@ pre {
 
 .hero-stage {
   position: relative;
-  margin-top: clamp(36px, 4vw, 56px);
+  margin-top: clamp(48px, 6vw, 80px);
   padding-bottom: 12%;
 }
 
@@ -1591,6 +1558,7 @@ pre {
 /* Tablet */
 
 @media (max-width: 999px) {
+  .hero-body,
   .section-head,
   .showcase-body,
   .closing-inner,
@@ -1768,13 +1736,14 @@ pre {
     min-width: 0;
   }
 
-  .hero-cta-sep {
-    display: none;
+  .tour-card {
+    border-radius: 12px;
   }
 
-  .tour-link {
-    grid-column: 1 / -1;
-    margin-top: 8px;
+  .tour-play {
+    width: 54px;
+    height: 54px;
+    margin: -27px 0 0 -27px;
   }
 
   .hero-stage {
