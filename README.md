@@ -14,14 +14,11 @@ python3 -m http.server 8080
 
 Edit `assets/js/config.js`:
 
-```js
-window.ESTATEHUB_LINKS = {
-  demo: "https://demo.example.com",
-  purchase: "https://codecanyon.net/item/...",
-};
-```
+- `demo` is the live demo URL.
+- `CODECANYON_ITEM_ID` is the numeric ID Envato gives the item on approval. The purchase link is built from it and the item slug (`estatehub-aipowered-real-estate-marketplace-property-management-platform`). If the title changes, update `CODECANYON_SLUG` to match the item page URL.
+- `custom` is where "Request a quote" points.
 
-The "Live demo" and "Buy" buttons appear in the header, the hero, the closing band and the purchase bar on phones. They all read these two values. While a value is empty its buttons are still shown but do not navigate, so set both before publishing.
+The "Live demo" button appears in the header, the hero, the closing band and the purchase bar on phones. The other "Buy" buttons scroll to the pricing section, where the Regular and Extended buttons open the CodeCanyon item. While a link is empty its buttons are still shown but do not navigate, so set them all before publishing.
 
 ## Deploy to GitHub Pages
 
