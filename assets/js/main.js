@@ -294,11 +294,25 @@
 
   var tour = $("#tour");
   var tourVideo = $("#tour-video");
+  var tourPreview = $(".tour-thumb video");
+  var reducedMotion = window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  function playPreview() {
+    if (!tourPreview || reducedMotion) return;
+    var playing = tourPreview.play();
+    if (playing && playing.catch) playing.catch(function () {});
+  }
+
+  if (tourPreview && reducedMotion) {
+    tourPreview.removeAttribute("autoplay");
+    tourPreview.pause();
+  }
 
   $$("[data-tour]").forEach(function (button) {
     button.addEventListener("click", function () {
       if (typeof tour.showModal !== "function") return;
       tour.showModal();
+      if (tourPreview) tourPreview.pause();
       var playing = tourVideo.play();
       if (playing && playing.catch) playing.catch(function () {});
     });
@@ -314,6 +328,7 @@
 
   tour.addEventListener("close", function () {
     tourVideo.pause();
+    playPreview();
   });
 
   /* Theme comparison */
