@@ -331,15 +331,6 @@
     playPreview();
   });
 
-  /* Theme comparison */
-
-  var compare = $("#compare");
-  var compareRange = $(".compare-range", compare);
-
-  compareRange.addEventListener("input", function () {
-    compare.style.setProperty("--pos", compareRange.value + "%");
-  });
-
   /* Mobile purchase bar and scroll reveal */
 
   var buybar = $("#buybar");
