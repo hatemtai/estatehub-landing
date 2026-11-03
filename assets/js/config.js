@@ -2,8 +2,8 @@
 // While a value is empty its buttons are shown but do not navigate.
 
 // CodeCanyon item: "EstateHub - AI-Powered Real Estate Marketplace & Property Management Platform".
-// Envato assigns the numeric item ID on approval; paste it here to switch the Buy buttons on.
-var CODECANYON_ITEM_ID = "";
+// Live item: https://codecanyon.net/item/estatehub-aipowered-real-estate-marketplace-property-management-platform/65503922
+var CODECANYON_ITEM_ID = "65503922";
 var CODECANYON_SLUG = "estatehub-aipowered-real-estate-marketplace-property-management-platform";
 
 window.ESTATEHUB_LINKS = {
