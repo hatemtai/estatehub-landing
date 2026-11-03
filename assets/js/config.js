@@ -7,7 +7,7 @@ var CODECANYON_ITEM_ID = "65503922";
 var CODECANYON_SLUG = "estatehub-aipowered-real-estate-marketplace-property-management-platform";
 
 window.ESTATEHUB_LINKS = {
-  demo: "https://estatehub.antripe.com",
+  demo: "https://estatehub.antripe.com/demo",
   purchase: CODECANYON_ITEM_ID
     ? "https://codecanyon.net/item/" + CODECANYON_SLUG + "/" + CODECANYON_ITEM_ID
     : "",
